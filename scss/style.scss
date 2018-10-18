@@ -1,0 +1,114 @@
+html, body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #000;
+	max-width: 100%;
+	overflow-x: hidden;
+	margin: 0px;
+	padding: 0px;
+}
+//MIXINS
+
+// Responsive Breakpoints
+// Usage: @include bp(W1000) { height: 80px; }
+@mixin bp($point) {
+    @if $point == M1800 {
+       @media (min-width: 1800px) { @content; }
+   }
+   @else if $point == M1600 {
+       @media (min-width: 1600px) { @content; }
+   }
+    @else if $point == W1650 {
+       @media (max-width: 1650px) { @content; }
+   }
+   @else if $point == W1600 {
+       @media (max-width: 1600px) { @content; }
+   }
+   @else if $point == W1450 {
+       @media (max-width: 1450px) { @content; }
+   }
+   @else if $point == W1300 {
+       @media (max-width: 1300px) { @content; }
+   }
+   @else if $point == W1250 {
+       @media (max-width: 1250px) { @content; }
+   }
+   @else if $point == W1200 {
+       @media (max-width: 1200px) { @content; }
+   }
+   @else if $point == W1000{
+       @media (max-width: 1000px) { @content; }
+   }
+   @else if $point == W950{
+       @media (max-width: 950px) { @content; }
+   }
+   @else if $point == W900{
+       @media (max-width: 900px) { @content; }
+   }
+   @else if $point == W850{
+       @media (max-width: 850px) { @content; }
+   }
+   @else if $point == M1000{
+       @media (min-width: 1000px) { @content; }
+   }
+   @else if $point == M768 {
+       @media (min-width: 768px) { @content; }
+   }
+   @else if $point == W768 {
+       @media (max-width: 768px) { @content; }
+   }
+   @else if $point == W767 {
+       @media (max-width: 767px) { @content; }
+   }
+   @else if $point == W600 {
+       @media (max-width: 600px) { @content; }
+   }
+   @else if $point == W550 { // Container Fix
+       @media (max-width: 550px) { @content; }
+   }
+   @else if $point == W500 { // Container Fix
+       @media (max-width: 500px) { @content; }
+   }
+   @else if $point == W480 { // Container Fix
+       @media (max-width: 480px) { @content; }
+   }
+   @else if $point == W420 {
+       @media (max-width: 420px) { @content; }
+   }
+   @else if $point == W350 { // Container Fix
+       @media (max-width: 350px) { @content; }
+   }
+}
+
+//	Transitions
+@mixin transition($time...) {
+   -moz-transition: all $time + 's' ease;
+   -o-transition: all $time + 's' ease;
+   -webkit-transition: all $time + 's' ease;
+   transition: all $time + 's' ease;
+}
+
+// *{
+// 	-webkit-transition:all 0.4s ease;
+// 		 -moz-transition:all 0.4s ease;
+// 			   -o-transition:all 0.4s ease;
+// 					 transition:all 0.4s ease;
+// }
+
+.footer-sticky {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.bg-acl {
+	background-color: #f58723;
+}
+
+.a-acl {
+	color: #3c3c3c!important;
+}
+
+.my-card:hover {
+	border-color: #f58723;
+}
