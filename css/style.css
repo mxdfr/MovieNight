@@ -23,7 +23,7 @@ html, body {
 
 /* line 116, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 #home-page {
-  background-image: url("../img/background.png");
+  background-image: url("../images/background.png");
   min-height: 100vh;
   background-size: cover;
   position: absolute;
@@ -125,15 +125,15 @@ html, body {
 .question-page .movieScreenBackground {
   margin-top: 60px !important;
   background-color: rgba(0, 0, 0, 0.3);
-  padding: 30px;
+  padding: 30px 60px;
   border-radius: 2px;
 }
 
 /* line 192, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 .question-page .movieScreen {
-  padding: 100px 60px;
+  padding: 60px 40px;
   text-align: center;
-  background-color: #e5e6d8;
+  background-color: #ffffff;
   border-radius: 5px;
   margin: auto;
 }
@@ -143,7 +143,7 @@ html, body {
   color: #8a373c;
 }
 
-/* line 204, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 203, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 .question-page #lottie {
   width: 100%;
   height: 100%;
@@ -154,9 +154,19 @@ html, body {
   opacity: 1;
 }
 
-/* line 212, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 211, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 .question-page #lottie svg {
-  margin-top: -160px;
+  width: 70% !important;
+  margin-top: -120px;
+}
+
+/* line 216, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+.question-page .questionField {
+  background-color: #fff;
+  padding: 60px;
+  margin-top: -170px;
+  position: absolute;
+  width: 100%;
 }
 
 /*# sourceMappingURL=../css/style.map */
