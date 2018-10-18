@@ -11,31 +11,14 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
 		<link href="./css/style.css" rel="stylesheet">
-		<link href="css/animate.css" rel="stylesheet">
   </head>
 
   <body  ng-controller="MainCtrl">		 
-		<div id="home-page">
-			<div class="in-grid">
-				<h1 class="animated fadeIn">MOVIE <strong>{{var}}</strong></h1>		
-				<div class="cta-topage2 animated fadeIn"><p><i class="fas fa-play"></i>FIND A MOVIE </p></div>
-			</div>
-		</div>
+        <div class="nav"><h1>- movie night -</h1></div>
+		<h2> </h2>
 		
-		<div id="next-page">
-				<div class="filmrol"><img src="img/filmrol.gif"></div>
-		</div>
 		
 					 <!-- JavaScript libraries -->
-		<script>
-				$( ".cta-topage2" ).click(function() {
-					$( "#home-page" ).fadeOut( "slow");
-					$( "#next-page" ).delay(500).fadeIn( "slow");
-					$( ".filmrol" ).delay(1800).fadeOut( "slow", function() {
-						window.location.href = "questions.html";
-					});
-				});
-		</script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="js/angular.min.js"></script>
 		<script src="js/Chart.min.js"></script>
