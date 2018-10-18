@@ -15,7 +15,17 @@ h1 {
   margin-top: 40vh;
 }
 
-/* line 102, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 101, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+h1:before {
+  content: '- ';
+}
+
+/* line 104, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+h1:after {
+  content: ' -';
+}
+
+/* line 108, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 body {
   background-image: url("../img/background.png");
   min-height: 100vh;
