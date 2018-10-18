@@ -1,4 +1,4 @@
-/* line 1, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 1, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 html, body {
   font-family: 'Montserrat', sans-serif;
   background-color: #000;
@@ -8,24 +8,24 @@ html, body {
   padding: 0px;
 }
 
-/* line 97, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 97, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 h1 {
-  color: #fff !important;
+  color: black !important;
   text-align: center;
   margin-top: 40vh;
 }
 
-/* line 101, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 101, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 h1:before {
   content: '- ';
 }
 
-/* line 104, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 104, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 h1:after {
   content: ' -';
 }
 
-/* line 108, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 108, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 body {
   background-image: url("../img/background.png");
   min-height: 100vh;
