@@ -8,7 +8,7 @@ function mainCtrl($scope, $http, ChartJsProvider){
 	// ###################### Question 4 
 	// Associate your sparql endpoint to a scope variable. Add the "/query?query=" parameter after the variable
 	// Ex. $scope.myVariable = "myendpoint"
-	$scope.myendpoint = 'http://localhost:5820/Mapping/query?query=';
+	$scope.var = 'BLOB';
 	
 	
 	// ###################### Question 5 
