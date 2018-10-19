@@ -7,7 +7,15 @@
     <meta name="author" content="DIJKSTRA, DE GEUS, DE FROE">
     <title> Movie Night </title>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    function setAnswer(answer) {
+      console.log("helloo");
+      console.log(answer);
+      $( ".answerWrapper" ).css("opacity" , "0.5");
+      $( "#answer-" + answer ).css("opacity" , "1");
+    }
+    </script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
@@ -40,14 +48,12 @@
                 <tr onclick="setAnswer('d')">
                   <td class="answerWrapper" id="answer-d"><span class="answerOption" id="answer4">Stressed</span><br></td>
                 </tr>
-                <tr onclick="setAnswer('d')">
-                  <td class="answerWrapper" id="answer-d"><span class="answerOption" id="answer4">Bored</span><br></td>
+                <tr onclick="setAnswer('e')">
+                  <td class="answerWrapper" id="answer-e"><span class="answerOption" id="answer4">Bored</span><br></td>
                   </tr>
             </tbody></table>
             
           </div>
-            <!-- <h3>What is your current mood?</h3>
-            <p>Blob<br>Blob<br>Blob<br>Blob<br>Blob<br></p> -->
       </div>
            <!-- JavaScript libraries -->
       <script>
@@ -55,8 +61,8 @@
           $( "#firstline" ).fadeIn( "2000");
           $( "#firstline" ).delay(3000).fadeOut( "2000");
           $( "#secondline" ).delay(4000).fadeIn( "2000");
-          $( "#secondline" ).delay(5000).fadeOut( "2000");
-          $( ".question" ).delay(10000).slideDown( "2000");
+          $( "#secondline" ).delay(4000).fadeOut( "2000");
+          $( ".question" ).delay(9000).slideDown( "2000");
         });
     </script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

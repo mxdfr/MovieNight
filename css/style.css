@@ -200,13 +200,17 @@ html, body {
 /* line 240, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 .question-page .question tr {
   display: inline-block;
+  margin: 10px 10px -10px 20px;
+}
+
+/* line 244, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+.question-page .question td {
   background: #131820;
   background: -moz-linear-gradient(top, #131820 0%, #532a30 100%);
   background: -webkit-linear-gradient(top, #131820 0%, #532a30 100%);
   background: linear-gradient(to bottom, #131820 0%, #532a30 100%);
   border-radius: 50px;
   padding: 15px;
-  margin: 10px 10px -10px 20px;
   color: #fff;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
@@ -214,8 +218,8 @@ html, body {
   transition: all 1s ease;
 }
 
-/* line 251, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
-.question-page .question tr:hover {
+/* line 253, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+.question-page .question td:hover {
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   -webkit-transition: all 1s ease;
