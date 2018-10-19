@@ -50,7 +50,7 @@
           </div>
           <div class="question">
             <h3 id="questionStatement">What is your current mood?</h3>
-            <table id="answers" align="center">
+            <table id="answersTable" align="center">
                 <tbody><tr id="hide-a" onclick="setAnswer('a')">
                   <td class="answerWrapper" id="answer-a"><span class="answerOption" id="answer1"> </span><br></td>
                 </tr>
@@ -67,10 +67,18 @@
                   <td class="answerWrapper" id="answer-e"><span class="answerOption" id="answer5"> </span><br></td>
                   </tr>
             </tbody></table>
+            <!--Make sure the form has the autocomplete function switched off:-->
+            <form id="actorcompletefield" autocomplete="off">
+              <div class="autocomplete" style="width:300px;">
+                <input id="myInput" type="text" name="myCountry" placeholder="Country">
+              </div>
+              <input type="submit">
+            </form>
             <div class="buttons">
               <div onclick="questionTwo()" class="submitButton">submit</div>
               <div class="skipButton">or skip this question</div>
             </div>
+            
           </div>
       </div>
            <!-- JavaScript libraries -->
@@ -108,6 +116,13 @@
           $( "#hide-c" ).css("display" , "none");
           $( "#hide-d" ).css("display" , "none");
           $( "#hide-e" ).css("display" , "none");
+          $(".submitButton").attr("onclick","questionFour()");
+        } 
+        function questionFour(){
+          $( ".answerWrapper" ).css("opacity" , "1");
+          $( "#questionStatement" ).html("Name a few of your favorite actors:");
+          $( "#answersTable" ).css("display" , "none");
+          $( "#actorcompletefield" ).slideDown();
           $(".submitButton").attr("onclick","questionThree()");
         } 
     </script>
