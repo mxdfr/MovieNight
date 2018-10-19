@@ -189,7 +189,7 @@ html, body {
   box-shadow: 0px 8px 0 0px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   color: #622b30;
-  padding: 50px 50px 65px;
+  padding: 50px 50px 15px;
 }
 
 /* line 237, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
@@ -227,6 +227,44 @@ html, body {
   background: -moz-linear-gradient(top, #864444 0%, #532a30 100%);
   background: -webkit-linear-gradient(top, #864444 0%, #532a30 100%);
   background: linear-gradient(to bottom, #864444 0%, #532a30 100%);
+}
+
+/* line 260, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+.question-page .question .submitButton {
+  background: #131820;
+  background: -moz-linear-gradient(top, #864444 0%, #532a30 100%);
+  background: -webkit-linear-gradient(top, #864444 0%, #532a30 100%);
+  background: linear-gradient(to bottom, #864444 0%, #532a30 100%);
+  border-radius: 50px;
+  padding: 15px 50px;
+  margin-top: 60px !important;
+  color: #fff;
+  margin: auto;
+  width: fit-content;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* line 272, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+.question-page .question .submitButton:hover {
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-box-shadow: 0px 0px 0 7px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 0 7px rgba(0, 0, 0, 0.15);
+  background: -moz-linear-gradient(top, #864444 0%, #532a30 100%);
+  background: -webkit-linear-gradient(top, #864444 0%, #532a30 100%);
+  background: linear-gradient(to bottom, #864444 0%, #532a30 100%);
+}
+
+/* line 281, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+.question-page .question .skipButton {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 @-webkit-keyframes blink {

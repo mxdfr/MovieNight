@@ -14,6 +14,20 @@
       console.log(answer);
       $( ".answerWrapper" ).css("opacity" , "0.5");
       $( "#answer-" + answer ).css("opacity" , "1");
+      $( ".submitButton" )
+          .delay(500)
+          .queue(function (next) { 
+            $(this).css("-webkit-box-shadow" , "0px 0px 0 10px rgba(100, 35, 49, 0.1)");
+            $(this).css("box-shadow" , "0px 0px 0 10px rgba(100, 35, 49, 0.1)");
+            next(); 
+          });
+      $( ".submitButton" )
+          .delay(2000)
+          .queue(function (next) { 
+            $(this).css("-webkit-box-shadow" , "0px 0px 0 2px rgba(100, 35, 49, 0.1)");
+            $(this).css("box-shadow" , "0px 0px 0 2px rgba(100, 35, 49, 0.1)");
+            next(); 
+          });    
     }
     </script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
@@ -52,17 +66,21 @@
                   <td class="answerWrapper" id="answer-e"><span class="answerOption" id="answer4">Bored</span><br></td>
                   </tr>
             </tbody></table>
-            
+            <div class="buttons">
+              <div class="submitButton">submit</div>
+              <div class="skipButton">or skip this question</div>
+            </div>
           </div>
       </div>
            <!-- JavaScript libraries -->
       <script>
         $(function() {
-          $( "#firstline" ).fadeIn( "2000");
-          $( "#firstline" ).delay(3000).fadeOut( "2000");
-          $( "#secondline" ).delay(4000).fadeIn( "2000");
-          $( "#secondline" ).delay(4000).fadeOut( "2000");
-          $( ".question" ).delay(9000).slideDown( "2000");
+          // $( "#firstline" ).fadeIn( "2000");
+          // $( "#firstline" ).delay(3000).fadeOut( "2000");
+          // $( "#secondline" ).delay(4000).fadeIn( "2000");
+          // $( "#secondline" ).delay(4000).fadeOut( "2000");
+          // $( ".question" ).delay(9000).slideDown( "2000");
+          $( ".question" ).delay(0).slideDown( "2000");
         });
     </script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
