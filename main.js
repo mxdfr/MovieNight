@@ -40,5 +40,3 @@ function mainCtrl($scope, $http, ChartJsProvider){
 	
 
 }
-
-
