@@ -185,17 +185,19 @@ html, body {
 .question-page .question {
   display: none;
   background-color: #fff;
+  -webkit-box-shadow: 0px 8px 0 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 8px 0 0px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   color: #622b30;
   padding: 50px 50px 65px;
 }
 
-/* line 235, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 237, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 .question-page .question h3 {
   font-weight: 600;
 }
 
-/* line 238, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 240, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 .question-page .question tr {
   display: inline-block;
   background: #131820;
@@ -212,7 +214,7 @@ html, body {
   transition: all 1s ease;
 }
 
-/* line 249, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 251, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 .question-page .question tr:hover {
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
