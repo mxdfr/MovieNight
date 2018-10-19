@@ -261,6 +261,9 @@ html, body {
                 background: linear-gradient(to bottom, #864444 0%,#532a30 100%);
             }
         }
+        #answers {
+            margin-top: 15px;
+        }
         .submitButton {
             background: #131820; 
             background: -moz-linear-gradient(top,#864444 0%, #532a30 100%); 
@@ -268,7 +271,7 @@ html, body {
             background: linear-gradient(to bottom, #864444 0%,#532a30 100%);       
             border-radius: 50px;
             padding: 15px 50px;
-            margin-top: 60px !important;
+            margin-top: 40px !important;
             color:#fff;
             margin: auto;
             width: fit-content;

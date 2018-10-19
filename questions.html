@@ -49,26 +49,26 @@
             That way we can give you the best movie recommendation. 
           </div>
           <div class="question">
-            <h3>What is your current mood?</h3>
+            <h3 id="questionStatement">What is your current mood?</h3>
             <table id="answers" align="center">
-                <tbody><tr onclick="setAnswer('a')">
-                  <td class="answerWrapper" id="answer-a"><span class="answerOption" id="answer1">Happy</span><br></td>
+                <tbody><tr id="hide-a" onclick="setAnswer('a')">
+                  <td class="answerWrapper" id="answer-a"><span class="answerOption" id="answer1"> </span><br></td>
                 </tr>
-                <tr onclick="setAnswer('b')">
-                  <td class="answerWrapper" id="answer-b"><span class="answerOption" id="answer2">Tired</span><br></td>
+                <tr id="hide-b" onclick="setAnswer('b')">
+                  <td class="answerWrapper" id="answer-b"><span class="answerOption" id="answer2"> </span><br></td>
                 </tr>
-                <tr onclick="setAnswer('c')">
-                  <td class="answerWrapper" id="answer-c"><span class="answerOption" id="answer3">Lonely</span><br></td>
+                <tr id="hide-c" onclick="setAnswer('c')">
+                  <td class="answerWrapper" id="answer-c"><span class="answerOption" id="answer3"> </span><br></td>
                 </tr>
-                <tr onclick="setAnswer('d')">
-                  <td class="answerWrapper" id="answer-d"><span class="answerOption" id="answer4">Stressed</span><br></td>
+                <tr id="hide-d" onclick="setAnswer('d')">
+                  <td class="answerWrapper" id="answer-d"><span class="answerOption" id="answer4"> </span><br></td>
                 </tr>
-                <tr onclick="setAnswer('e')">
-                  <td class="answerWrapper" id="answer-e"><span class="answerOption" id="answer4">Bored</span><br></td>
+                <tr id="hide-e" onclick="setAnswer('e')">
+                  <td class="answerWrapper" id="answer-e"><span class="answerOption" id="answer5"> </span><br></td>
                   </tr>
             </tbody></table>
             <div class="buttons">
-              <div class="submitButton">submit</div>
+              <div onclick="questionTwo()" class="submitButton">submit</div>
               <div class="skipButton">or skip this question</div>
             </div>
           </div>
@@ -76,13 +76,40 @@
            <!-- JavaScript libraries -->
       <script>
         $(function() {
-          $( "#firstline" ).fadeIn( "2000");
-          $( "#firstline" ).delay(3000).fadeOut( "2000");
-          $( "#secondline" ).delay(4000).fadeIn( "2000");
-          $( "#secondline" ).delay(4000).fadeOut( "2000");
-          $( ".question" ).delay(9000).slideDown( "2000");
-          // $( ".question" ).delay(0).slideDown( "2000");
+          // $( "#firstline" ).fadeIn( "2000");
+          // $( "#firstline" ).delay(3000).fadeOut( "2000");
+          // $( "#secondline" ).delay(4000).fadeIn( "2000");
+          // $( "#secondline" ).delay(4000).fadeOut( "2000");
+          // $( ".question" ).delay(9000).slideDown( "2000");
+          $( "#answer-a" ).html("Happy");
+          $( "#answer-b" ).html("Tired");
+          $( "#answer-c" ).html("Lonely");
+          $( "#answer-d" ).html("Stressed");
+          $( "#answer-e" ).html("Bored");
+          $( ".question" ).delay(0).slideDown( "2000");
         });
+        function questionTwo(){
+            $( "tr" ).css("display" , "inline-block");
+            $( ".answerWrapper" ).css("opacity" , "1");
+            $( "#questionStatement" ).html("With who are you watching?");
+            $( "#answer-a" ).html("Friends");
+            $( "#answer-b" ).html("Family");
+            $( "#answer-c" ).html("Boy / Girl -friend");
+            $( "#answer-d" ).html("Me Myself and I");
+            $( "#hide-e" ).css("display" , "none");
+            $(".submitButton").attr("onclick","questionThree()");
+          } 
+        function questionThree(){
+          $( "tr" ).css("display" , "inline-block");
+          $( ".answerWrapper" ).css("opacity" , "1");
+          $( "#questionStatement" ).html("Do you like horror movies?");
+          $( "#answer-a" ).html("Yes");
+          $( "#answer-b" ).html("No");
+          $( "#hide-c" ).css("display" , "none");
+          $( "#hide-d" ).css("display" , "none");
+          $( "#hide-e" ).css("display" , "none");
+          $(".submitButton").attr("onclick","questionThree()");
+        } 
     </script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="js/angular.min.js"></script>
