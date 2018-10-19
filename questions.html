@@ -69,7 +69,7 @@
             </tbody></table>
             <div class="buttons">
               <div onclick="questionTwo()" class="submitButton">submit</div>
-              <div class="skipButton">or skip this question</div>
+              <div onclick="questionTwo()" class="skipButton">or skip this question</div>
             </div>
           </div>
       </div>
@@ -98,6 +98,7 @@
             $( "#answer-d" ).html("Me Myself and I");
             $( "#hide-e" ).css("display" , "none");
             $(".submitButton").attr("onclick","questionThree()");
+            $('.skipButton').attr("onclick", "questionThree()");
           } 
         function questionThree(){
           $( "tr" ).css("display" , "inline-block");
