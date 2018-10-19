@@ -28,6 +28,7 @@
             $(this).css("box-shadow" , "0px 0px 0 2px rgba(100, 35, 49, 0.1)");
             next(); 
           });    
+      $( ".skipButton").css("opacity" , "0.5");
     }
     </script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
@@ -38,7 +39,7 @@
 
   <body  ng-controller="MainCtrl" class="question-page">		
       <div class="animated slideInDown nav">
-        <h1 class="logo">movie<strong> night</strong></h1>
+        <h1 class="logo"><a href="index.html">movie<strong> night</strong></a></h1>
       </div>
       <div class="questionField in-grid">
           <div class="line" id="firstline">
@@ -75,12 +76,12 @@
            <!-- JavaScript libraries -->
       <script>
         $(function() {
-          // $( "#firstline" ).fadeIn( "2000");
-          // $( "#firstline" ).delay(3000).fadeOut( "2000");
-          // $( "#secondline" ).delay(4000).fadeIn( "2000");
-          // $( "#secondline" ).delay(4000).fadeOut( "2000");
-          // $( ".question" ).delay(9000).slideDown( "2000");
-          $( ".question" ).delay(0).slideDown( "2000");
+          $( "#firstline" ).fadeIn( "2000");
+          $( "#firstline" ).delay(3000).fadeOut( "2000");
+          $( "#secondline" ).delay(4000).fadeIn( "2000");
+          $( "#secondline" ).delay(4000).fadeOut( "2000");
+          $( ".question" ).delay(9000).slideDown( "2000");
+          // $( ".question" ).delay(0).slideDown( "2000");
         });
     </script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

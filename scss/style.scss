@@ -205,6 +205,10 @@ html, body {
                 margin-left: 10px;
                 content: "";
             }
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
         }
    }
     .questionField {
@@ -282,6 +286,9 @@ html, body {
             font-size: 12px;
             text-align: center;
             margin-top: 10px;
+            &:hover {
+                opacity: 1 !important;
+            }
         }
     }
     @-webkit-keyframes blink{
