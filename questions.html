@@ -10,8 +10,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
     function setAnswer(answer) {
-      console.log("helloo");
-      console.log(answer);
       $( ".answerWrapper" ).css("opacity" , "0.5");
       $( "#answer-" + answer ).css("opacity" , "1");
       $( ".submitButton" )
@@ -68,11 +66,16 @@
                   </tr>
             </tbody></table>
             <!--Make sure the form has the autocomplete function switched off:-->
+            <div id="selectedactors">
+              <table>
+
+              </table>
+            </div>
             <form id="actorcompletefield" autocomplete="off">
               <div class="autocomplete" style="width:300px;">
-                <input id="myInput" type="text" name="myCountry" placeholder="Country">
+                <input id="actorInput" type="text" name="myActor" placeholder="Actor">
               </div>
-              <input type="submit">
+              <input id="addActorBtn" type="submit" value="add">
             </form>
             <div class="buttons">
               <div onclick="questionTwo()" class="submitButton">submit</div>
@@ -88,7 +91,7 @@
           // $( "#firstline" ).delay(3000).fadeOut( "2000");
           // $( "#secondline" ).delay(4000).fadeIn( "2000");
           // $( "#secondline" ).delay(4000).fadeOut( "2000");
-          // $( ".question" ).delay(9000).slideDown( "2000");
+          $( ".question" ).delay(9000).slideDown( "2000");
           $( "#answer-a" ).html("Happy");
           $( "#answer-b" ).html("Tired");
           $( "#answer-c" ).html("Lonely");
@@ -123,8 +126,28 @@
           $( ".answerWrapper" ).css("opacity" , "1");
           $( "#questionStatement" ).html("Name a few of your favorite actors:");
           $( "#answersTable" ).css("display" , "none");
+          $( "#selectedactors" ).slideDown();
           $( "#actorcompletefield" ).slideDown();
-          $(".submitButton").attr("onclick","questionThree()");
+          $(".submitButton").attr("onclick","questionFive()");
+          $("#addActorBtn").attr("onclick","addActor()");
+        } 
+        function addActor() {
+          var selectedActor = $("#actorInput").val();
+          $( "#selectedactors > table" ).append("<tr> <td>" + selectedActor + "</td></tr>");
+          $("#actorInput").val("");
+        }
+        $('#selectedactors').on('click', 'tr', function() {
+            $(this).remove();
+        });
+        function questionFive(){
+          $( "#selectedactors" ).css("display" , "none");
+          $( ".answerWrapper" ).css("opacity" , "1");
+          $( "#questionStatement" ).html("Name a few of your favorite actors:");
+          $( "#answersTable" ).css("display" , "none");
+          $( "#selectedactors" ).slideDown();
+          $( "#actorcompletefield" ).slideDown();
+          $(".submitButton").attr("onclick","questionFive()");
+          $("#addActorBtn").attr("onclick","addActor()");
         } 
     </script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
