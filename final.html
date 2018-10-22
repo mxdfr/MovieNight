@@ -16,6 +16,13 @@
 
   <body  ng-controller="MainCtrl">
       <p>hi</p>
+      <div class="input-group mb-3">
+            <input type="text" class="form-control" ng-model="myInput" placeholder="Type here" >
+            <div class="input-group-append">
+          <button class="btn btn-outline-secondary" ng-click="fireInteraction()" type="button">GO!</button>
+            </div>
+          </div>
+         
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="js/angular.min.js"></script>
 		<script src="js/Chart.min.js"></script>
