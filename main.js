@@ -19,7 +19,7 @@ function mainCtrl($scope, $http, ChartJsProvider){
 	$scope.fireInteraction = function(){
 		$http( {
  			method: "GET",
-			url : $scope.myQuery = $scope.mysparqlendpoint+encodeURI($scope.myInput).replace(/#/g, '%23'),
+			url : $scope.myQuery = $scope.mysparqlendpoint+encodeURI(sessionStorage.query).replace(/#/g, '%23'),
 			headers : {'Accept':'application/sparql-results+json', 'Content-Type':'application/sparql-results+json'}
 			} )
 			.success(function(data, status ) {
@@ -140,4 +140,8 @@ function mergeQuery() {
   sessionStorage.queryPart4 = "} ORDER BY DESC(?rating) LIMIT 100"
   sessionStorage.query = sessionStorage.queryPart1 + sessionStorage.queryPart2 + sessionStorage.queryPart3 + sessionStorage.queryPart4
   alert(sessionStorage.query)
+}
+function sendQuery() {
+  document.getElementById("inputField").value = "Hoi"
+  document.getElementById("inputButton").click()
 }
