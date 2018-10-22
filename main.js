@@ -17,14 +17,6 @@ function mainCtrl($scope, $http, ChartJsProvider){
 	// The function needs to include : some arguments sent by the html + an http call to the sparql endpoint + a variable storing the results to be visualised    
 	// use the native function encodeURI(mySparqlQuery) to encode your query as a URL
 	$scope.fireInteraction = function(){
-    var xhr = new XMLHttpRequest()
-        xhr.open('POST', 'http://www.themovienight.ml/query', true)
-        xhr.withCredentials = true
-        xhr.onreadystatechange = function() {
-          if (xhr.readyState === 2) {// do something}
-        }
-        xhr.setRequestHeader('Content-Type', 'application/json')
-        xhr.send(json)
 		$http( {
  			method: "GET",
 			url : $scope.myQuery = $scope.mysparqlendpoint+encodeURI($scope.myInput).replace(/#/g, '%23'),
@@ -37,7 +29,7 @@ function mainCtrl($scope, $http, ChartJsProvider){
 	    		console.log('Error '+error);
 			});
 	};
-  
+
 }
 function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
