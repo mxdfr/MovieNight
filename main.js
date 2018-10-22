@@ -36,21 +36,34 @@ angular.forEach(data.results.bindings, function(val) {
 	$scope.myDynamicData.push(val.rating.value);
 });
 console.log($scope.myDynamicLabels[0])
+console.log($scope.myDynamicLabels[1])
+console.log($scope.myDynamicLabels[2])
+console.log($scope.myDynamicLabels[3])
+console.log($scope.myDynamicLabels[4])
 movie1 = $scope.myDynamicLabels[0]
 movie1 = movie1.split('/')
 movie1 = movie1[movie1.length-1]
+omdb(movie1)
+
 movie2 = $scope.myDynamicLabels[1]
 movie2 = movie2.split('/')
 movie2 = movie2[movie2.length-1]
+omdb(movie2)
+
 movie3 = $scope.myDynamicLabels[2]
 movie3 = movie3.split('/')
 movie3 = movie3[movie3.length-1]
-$("#movie1").html(movie1);
-$("#rating").html($scope.myDynamicData[0]);
-$("#movie2").html(movie2);
-$("#rating2").html($scope.myDynamicData[1]);
-$("#movie3").html(movie3);
-$("#rating3").html($scope.myDynamicData[2]);
+omdb(movie3)
+
+movie4 = $scope.myDynamicLabels[3]
+movie4 = movie4.split('/')
+movie4 = movie4[movie4.length-1]
+omdb(movie4)
+
+movie5 = $scope.myDynamicLabels[4]
+movie5 = movie5.split('/')
+movie5 = movie5[movie5.length-1]
+omdb(movie5)
   		})
 			.error(function(error ){
 	    		console.log('Error '+error);
@@ -58,6 +71,32 @@ $("#rating3").html($scope.myDynamicData[2]);
 	};
 
 }
+
+function omdb(title) {
+  $.get("http://www.omdbapi.com/?t=" + title + "&apikey=db177536", function(data, status){
+      if (data.Response == "False"){
+      }
+
+      else{
+      document.getElementById("omdb").innerHTML += "Title: " +data.Title
+      document.getElementById("omdb").innerHTML += "<br>Genres: " + data.Genre
+      document.getElementById("omdb").innerHTML += "<br>Actors: " + data.Actors
+      document.getElementById("omdb").innerHTML += "<br>Director: " + data.Director
+      document.getElementById("omdb").innerHTML += "<br>Writer: " + data.Writer
+      document.getElementById("omdb").innerHTML += "<br>Runtime: " + data.Runtime
+      document.getElementById("omdb").innerHTML += "<br>Awards: " + data.Awards
+      document.getElementById("omdb").innerHTML += "<br>Release data: " + data.Released
+      document.getElementById("omdb").innerHTML += "<br>Website: " + data.Website
+      document.getElementById("omdb").innerHTML += "<br>Plot: " + data.Plot
+  
+      var image = document.createElement("img");
+      image.src=data.Poster
+      document.getElementById("omdb").append(image)
+      console.log(data)
+    }
+  
+          });
+  }
 
 function setAnswer(answer) {
   if(answer == 'Happy') {
