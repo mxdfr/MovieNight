@@ -110,7 +110,7 @@ html, body {
     width: 850px;
     margin: auto;
     @include bp(W900) {
-        width: 90%;
+        width: 100%;
     }
 }
 #home-page {
@@ -237,6 +237,9 @@ html, body {
         border-radius: 20px;
         padding: 60px;
         color: #fff;
+        @include bp(W900) {
+            padding: 30px;
+        }
     }
     .var-highlight{
         color: #C0AD60;
@@ -263,7 +266,7 @@ html, body {
         }
         tr {
             display: inline-block;
-            margin: 10px 10px -10px 20px;
+            margin: 10px 10px 0px 20px
         }
         td {
             background: #131820; 
@@ -434,4 +437,12 @@ html, body {
         0%{opacity: 0;}
         100%{opacity: 1;}
     }
+}
+.content-wrapper {
+    min-height: calc(100vh - 80px);
+}
+.footer {
+    padding-bottom: 10px;
+    color: transparentize(#fff, 0.8);
+    text-align: center;
 }

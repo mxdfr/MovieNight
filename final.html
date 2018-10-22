@@ -14,8 +14,9 @@
 		<link href="css/animate.css" rel="stylesheet">
   </head>
 
-  <body  ng-controller="MainCtrl" class="final-page">  
-      <h1>Your top 5 movie Results</h1> 
+  <body  ng-controller="MainCtrl" class="final-page">
+      <div class="content-wrapper"> 
+          <h1>Your top 5 movie Results</h1> 
       <div class="input-group mb-3">
             <input type="text" class="form-control" ng-model="myInput" placeholder="Type here" >
             <div class="input-group-append">
@@ -27,10 +28,29 @@
             <h5 class="card-title text-center">My result</h5>
               <p class="card-text">
              <!-- TODO visualise result here -->
-             <p>{{result}}</p>
+             <table>
+                <tr>
+                  <th>Movie 1</th>
+                  <th id="movie1"></th>
+                  <th id="rating"></th>
+                </tr>
+                <tr>
+                    <th>Movie 2</th>
+                    <th id="movie2"></th>
+                    <th id="rating2"></th>
+                  </tr>
+                  <tr>
+                    <th>Movie 3</th>
+                    <th id="movie3"></th>
+                    <th id="rating3"></th>
+                  </tr>
+              </table>
           </p>
           
           </div>
+        </div>
+      
+        <div class="footer">- A Knowledge & Data Project<br>Ramon Dijkstra, Lucas de Geus & Max de Froe</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="js/angular.min.js"></script>
 		<script src="js/Chart.min.js"></script>
