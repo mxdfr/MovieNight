@@ -57,6 +57,10 @@
               </div>
               <input id="addActorBtn" type="submit" value="add">
             </form>
+            <div class="slidecontainer">
+              <input type="range" min="5" max="100" value="20" class="slider" id="ageSlider">
+              <p>Age: <span id="selectedAge"></span></p>
+            </div>
             <div class="buttons">
               <div onclick="questionTwo()" class="submitButton">submit</div>
               <div onclick="questionTwo();setAnswer('Empty')" class="skipButton">or skip this question</div>
@@ -105,38 +109,38 @@
           $( ".question" ).delay(0).slideDown( "2000");
         });
         function questionTwo(){
-            $( "tr" ).css("display" , "inline-block");
-            $( ".answerWrapper" ).css("opacity" , "1");
-            $( "#questionStatement" ).html("With who are you watching?");
-            $( "#answer-a" ).html("Friends");
-            $( "#answer-b" ).html("Boy/Girl -friend");
-            $( "#answer-c" ).html("Me Myself and I");
-            $( "#hide-d" ).css("display" , "none");
-            $( "#hide-e" ).css("display" , "none");
+            $(".slidecontainer").css("display" , "inline-block");
+            $("#answersTable").css("display" , "none");
+            $( "#questionStatement" ).html("What is your age?");
             $(".submitButton").attr("onclick","questionThree()");
             $('.skipButton').attr("onclick", "questionThree()");
           } 
         function questionThree(){
+          ageChecker()
+          $("#answersTable").css("display" , "inline-block");
+          $(".slidecontainer").css("display" , "none");
           $( "tr" ).css("display" , "inline-block");
           $( ".answerWrapper" ).css("opacity" , "1");
-          $( "#questionStatement" ).html("Do you like horror movies?");
-          $( "#answer-a" ).html("Yes");
-          $( "#answer-b" ).html("No");
-          $( "#hide-c" ).css("display" , "none");
+          $( "#questionStatement" ).html("With who are you watching?");
+          $( "#answer-a" ).html("Friends");
+          $( "#answer-b" ).html("Boy/Girl -friend");
+          $( "#answer-c" ).html("Me Myself and I");
           $( "#hide-d" ).css("display" , "none");
           $( "#hide-e" ).css("display" , "none");
           $(".submitButton").attr("onclick","questionFour()");
           $('.skipButton').attr("onclick", "questionFour()");
         } 
         function questionFour(){
+          mergeQuery()
+          $(".slidecontainer").css("display" , "none");
           $( ".answerWrapper" ).css("opacity" , "1");
           $( "#questionStatement" ).html("Name a few of your favorite actors:");
           $( "#answersTable" ).css("display" , "none");
           $( "#selectedactors" ).slideDown();
           $( "#actorcompletefield" ).slideDown();
-          $(".submitButton").attr("onclick","questionFive()");
           $("#addActorBtn").attr("onclick","addActor()");
-          $('.skipButton').attr("onclick", "questionFive()");
+          $(".submitButton").attr("onclick","show_results()");
+          $('.skipButton').attr("onclick", "show_results()");
         } 
         function addActor() {
           var selectedActor = $("#actorInput").val();
@@ -145,19 +149,7 @@
         }
         $('#selectedactors').on('click', 'tr', function() {
             $(this).remove();
-        });
-        function questionFive(){
-          $( "#selectedactors" ).css("display" , "none");
-          $( ".answerWrapper" ).css("opacity" , "1");
-          $( "#questionStatement" ).html("lastq");
-          $( "#answersTable" ).css("display" , "none");
-          $( "#selectedactors" ).slideDown();
-          $( "#actorcompletefield" ).slideDown();
-          $(".submitButton").attr("onclick","show_results()");
-          $("#addActorBtn").attr("onclick","addActor()");
-          $('.skipButton').attr("onclick", "show_results()");
-        } 
-   
+        });   
          function show_results(){
 					$( "#questionpage" ).fadeOut( "slow");
 					$( "#next-page" ).delay(500).fadeIn( "slow");
@@ -170,8 +162,9 @@
 		<script src="js/angular.min.js"></script>
 		<script src="js/Chart.min.js"></script>
 		<script src="js/angular-chart.min.js"></script>	
-		<script src="main.js"></script>
-    <script src="autocomplete.js"></script>
+    <script src="main.js"></script>
+    <script src="js/autocomplete.js"></script>
+    <script src="js/ageslider.js"></script>
   </body>
 
 </html>
