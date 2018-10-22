@@ -29,19 +29,19 @@
           <div class="question">
             <h3 id="questionStatement">What is your current mood?</h3>
             <table id="answersTable" align="center">
-                <tbody><tr id="hide-a" onclick="setAnswer('a')">
+                <tbody><tr id="hide-a" onclick="setActive('a');setAnswer('a')">
                   <td class="answerWrapper" id="answer-a"><span class="answerOption" id="answer1"> </span><br></td>
                 </tr>
-                <tr id="hide-b" onclick="setAnswer('b')">
+                <tr id="hide-b" onclick="setActive('b');setAnswer('b')">
                   <td class="answerWrapper" id="answer-b"><span class="answerOption" id="answer2"> </span><br></td>
                 </tr>
-                <tr id="hide-c" onclick="setAnswer('c')">
+                <tr id="hide-c" onclick="setActive('c');setAnswer('c')">
                   <td class="answerWrapper" id="answer-c"><span class="answerOption" id="answer3"> </span><br></td>
                 </tr>
-                <tr id="hide-d" onclick="setAnswer('d')">
+                <tr id="hide-d" onclick="setActive('d');setAnswer('d')">
                   <td class="answerWrapper" id="answer-d"><span class="answerOption" id="answer4"> </span><br></td>
                 </tr>
-                <tr id="hide-e" onclick="setAnswer('e')">
+                <tr id="hide-e" onclick="setActive('e');setAnswer('e')">
                   <td class="answerWrapper" id="answer-e"><span class="answerOption" id="answer5"> </span><br></td>
                   </tr>
             </tbody></table>
@@ -70,7 +70,7 @@
       
            <!-- JavaScript libraries -->
       <script>
-        function setAnswer(answer) {
+        function setActive(answer) {
           $( ".answerWrapper" ).css("opacity" , "0.5");
           $( "#answer-" + answer ).css("opacity" , "1");
           $( ".submitButton" )
@@ -98,10 +98,10 @@
           // $( "#secondline" ).delay(4000).fadeOut( "2000");
           // $( ".question" ).delay(9000).slideDown( "2000");
           $( "#answer-a" ).html("Happy");
-          $( "#answer-b" ).html("Tired");
-          $( "#answer-c" ).html("Lonely");
-          $( "#answer-d" ).html("Stressed");
-          $( "#answer-e" ).html("Bored");
+          $( "#answer-b" ).html("Stressed");
+          $( "#answer-c" ).html("Bored");
+          $( "#answer-d" ).html("Excited");
+          $( "#answer-e" ).html("Angry");
           $( ".question" ).delay(0).slideDown( "2000");
         });
         function questionTwo(){
