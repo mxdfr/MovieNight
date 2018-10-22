@@ -492,9 +492,10 @@ html, body {
 .slidecontainer {
   width: 100%;
   display: none;
+  text-align: center;
 }
 
-/* line 446, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 447, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 .slidecontainer .slider {
   -webkit-appearance: none;
   width: 100%;
@@ -507,12 +508,12 @@ html, body {
   border-radius: 30px;
 }
 
-/* line 458, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 459, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 .slidecontainer .slider:hover {
   opacity: 1;
 }
 
-/* line 462, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 463, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 .slidecontainer .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -523,7 +524,7 @@ html, body {
   border-radius: 30px;
 }
 
-/* line 472, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 473, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 .slidecontainer .slider::-moz-range-thumb {
   width: 25px;
   height: 25px;
@@ -532,19 +533,19 @@ html, body {
   border-radius: 30px;
 }
 
-/* line 482, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 483, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 .content-wrapper {
   min-height: calc(100vh - 80px);
 }
 
-/* line 485, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 486, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 .footer {
   padding-bottom: 10px;
   color: rgba(255, 255, 255, 0.2);
   text-align: center;
 }
 
-/* line 491, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 492, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 #final_table {
   color: #fff;
 }
