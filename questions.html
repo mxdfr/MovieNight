@@ -126,6 +126,7 @@
           $( "#hide-d" ).css("display" , "none");
           $( "#hide-e" ).css("display" , "none");
           $(".submitButton").attr("onclick","questionFour()");
+          $('.skipButton').attr("onclick", "questionFour()");
         } 
         function questionFour(){
           $( ".answerWrapper" ).css("opacity" , "1");
@@ -135,6 +136,7 @@
           $( "#actorcompletefield" ).slideDown();
           $(".submitButton").attr("onclick","questionFive()");
           $("#addActorBtn").attr("onclick","addActor()");
+          $('.skipButton').attr("onclick", "questionFive()");
         } 
         function addActor() {
           var selectedActor = $("#actorInput").val();
@@ -153,6 +155,7 @@
           $( "#actorcompletefield" ).slideDown();
           $(".submitButton").attr("onclick","show_results()");
           $("#addActorBtn").attr("onclick","addActor()");
+          $('.skipButton').attr("onclick", "show_results()");
         } 
    
          function show_results(){
