@@ -14,23 +14,22 @@
 		<link href="css/animate.css" rel="stylesheet">
   </head>
 
-  <body  ng-controller="MainCtrl" class="final-page">  
+  <body  ng-controller="MainCtrl" class="final-page"> 
+    <div class="content-wrapper"> 
       <h1>Your top 5 movie Results</h1> 
-      <div class="input-group mb-3">
-            <input type="text" class="form-control" ng-model="myInput" placeholder="Type here" >
-            <div class="input-group-append">
+      <div class="input-group mb-3 in-grid">
+        <input type="text" class="form-control" ng-model="myInput" placeholder="Type here" >
+        <div class="input-group-append">
           <button class="btn btn-outline-secondary" ng-click="fireInteraction()" type="button">GO!</button>
-            </div>
-          </div>
-       
-          <div class="card-body">
-            <h5 class="card-title text-center">My result</h5>
-              <p class="card-text">
-             <!-- TODO visualise result here -->
-             <p>{{result}}</p>
-          </p>
-          
-          </div>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <p class="card-text">
+        <p>{{result}}</p>
+      </div>
+    </div>
+    <div class="footer">- A Knowledge & Data Project<br>Ramon Dijkstra, Lucas de Geus & Max de Froe</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="js/angular.min.js"></script>
 		<script src="js/Chart.min.js"></script>
