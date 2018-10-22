@@ -17,7 +17,7 @@ html, body {
 @media (max-width: 900px) {
   /* line 109, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
   .in-grid {
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -121,14 +121,47 @@ html, body {
   width: 200px;
 }
 
-/* line 185, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 182, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+.final-page {
+  background-image: url("../images/background.png");
+  min-height: 100vh;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* line 189, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+.final-page h1 {
+  color: #fff !important;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 60px;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+/* line 196, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+.final-page h1:before {
+  content: '- ';
+}
+
+/* line 199, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+.final-page h1:after {
+  content: ' -';
+}
+
+/* line 205, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page {
   background-image: url("../images/background-blur.png");
   background-size: cover;
   min-height: 100vh;
 }
 
-/* line 189, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 209, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .nav {
   height: 70px;
   padding-top: 11px;
@@ -136,14 +169,14 @@ html, body {
   padding-left: 20px;
 }
 
-/* line 194, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 214, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .nav h1 {
   font-weight: 400;
   text-transform: uppercase;
   color: #fff;
 }
 
-/* line 198, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 218, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .nav h1::before {
   background-image: url("../images/logo.png");
   background-size: 28px 27px;
@@ -155,13 +188,13 @@ html, body {
   content: "";
 }
 
-/* line 208, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 228, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .nav h1 a {
   color: #fff;
   text-decoration: none;
 }
 
-/* line 214, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 234, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .questionField {
   margin-top: 60px;
   background-color: rgba(255, 255, 255, 0);
@@ -170,24 +203,31 @@ html, body {
   color: #fff;
 }
 
-/* line 221, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+@media (max-width: 900px) {
+  /* line 234, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+  .question-page .questionField {
+    padding: 30px;
+  }
+}
+
+/* line 244, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .var-highlight {
   color: #C0AD60;
 }
 
-/* line 224, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 247, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .string-highlight {
   color: rgba(253, 149, 90, 0.8);
 }
 
-/* line 228, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 251, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .line {
   font-size: 2em;
   text-align: center;
   display: none;
 }
 
-/* line 233, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 256, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question {
   display: none;
   background-color: #fff;
@@ -198,18 +238,18 @@ html, body {
   padding: 50px 50px 15px;
 }
 
-/* line 241, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 264, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question h3 {
   font-weight: 600;
 }
 
-/* line 244, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 267, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question tr {
   display: inline-block;
-  margin: 10px 10px -10px 20px;
+  margin: 10px 10px 0px 20px;
 }
 
-/* line 248, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 271, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question td {
   background: #131820;
   background: -moz-linear-gradient(top, #131820 0%, #532a30 100%);
@@ -224,7 +264,7 @@ html, body {
   transition: all 1s ease;
 }
 
-/* line 257, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 280, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question td:hover {
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
@@ -235,12 +275,12 @@ html, body {
   background: linear-gradient(to bottom, #864444 0%, #532a30 100%);
 }
 
-/* line 264, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 287, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question #answersTable {
   margin-top: 15px;
 }
 
-/* line 267, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 290, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question .submitButton {
   background: #131820;
   background: -moz-linear-gradient(top, #864444 0%, #532a30 100%);
@@ -258,7 +298,7 @@ html, body {
   transition: all 1s ease;
 }
 
-/* line 279, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 302, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question .submitButton:hover {
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
@@ -271,29 +311,29 @@ html, body {
   background: linear-gradient(to bottom, #864444 0%, #532a30 100%);
 }
 
-/* line 288, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 311, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question .skipButton {
   font-size: 12px;
   text-align: center;
   margin-top: 10px;
 }
 
-/* line 292, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 315, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question .skipButton:hover {
   opacity: 1 !important;
 }
 
-/* line 296, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 319, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question #selectedactors {
   display: none;
 }
 
-/* line 299, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 322, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question #selectedactors table tr {
   margin: 10px !important;
 }
 
-/* line 302, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 325, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question #selectedactors table td {
   background-color: #f1f1f1;
   width: fit-content;
@@ -304,31 +344,31 @@ html, body {
   box-shadow: 0px 0px 0 7px rgba(0, 0, 0, 0.15);
 }
 
-/* line 310, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 333, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question #selectedactors table td:hover {
   opacity: 0.5;
 }
 
-/* line 312, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 335, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question #selectedactors table td:hover:before {
   content: "X ";
   text-align: center;
 }
 
-/* line 320, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 343, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question #actorcompletefield {
   display: none;
   text-align: center;
 }
 
-/* line 323, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 346, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question #actorcompletefield .autocomplete {
   /*the container must be positioned relative:*/
   position: relative;
   display: inline-block;
 }
 
-/* line 329, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 352, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question #actorcompletefield input {
   border: 1px solid transparent;
   background-color: #f1f1f1;
@@ -336,19 +376,19 @@ html, body {
   font-size: 16px;
 }
 
-/* line 336, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 359, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question #actorcompletefield input[type=text] {
   background-color: #f1f1f1;
   width: 100%;
   border-radius: 10px 0px 0px 10px;
 }
 
-/* line 340, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 363, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question #actorcompletefield input[type=text]:focus {
   outline: none !important;
 }
 
-/* line 345, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 368, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question #actorcompletefield input[type=submit] {
   background: #131820;
   background: -moz-linear-gradient(top, #864444 0%, #532a30 100%);
@@ -368,7 +408,7 @@ html, body {
   cursor: pointer;
 }
 
-/* line 358, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 381, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question #actorcompletefield input[type=submit]:hover {
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
@@ -381,12 +421,12 @@ html, body {
   background: linear-gradient(to bottom, #864444 0%, #532a30 100%);
 }
 
-/* line 367, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 390, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question #actorcompletefield input[type=submit]:focus {
   outline: none !important;
 }
 
-/* line 372, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 395, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question #actorcompletefield .autocomplete-items {
   position: absolute;
   border: 1px solid #d4d4d4;
@@ -399,7 +439,7 @@ html, body {
   right: 0;
 }
 
-/* line 384, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 407, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question #actorcompletefield .autocomplete-items div {
   padding: 10px;
   cursor: pointer;
@@ -407,13 +447,13 @@ html, body {
   border-bottom: 1px solid #d4d4d4;
 }
 
-/* line 391, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 414, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question #actorcompletefield .autocomplete-items div:hover {
   /*when hovering an item:*/
   background-color: #e9e9e9;
 }
 
-/* line 396, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 419, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .question-page .question #actorcompletefield .autocomplete-active {
   /*when navigating through the items using the arrow keys:*/
   background-color: DodgerBlue !important;
@@ -445,6 +485,18 @@ html, body {
   100% {
     opacity: 1;
   }
+}
+
+/* line 441, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+.content-wrapper {
+  min-height: calc(100vh - 80px);
+}
+
+/* line 444, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+.footer {
+  padding-bottom: 10px;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: center;
 }
 
 /*# sourceMappingURL=../css/style.map */

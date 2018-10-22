@@ -8,27 +8,6 @@
     <title> Movie Night </title>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-    function setAnswer(answer) {
-      $( ".answerWrapper" ).css("opacity" , "0.5");
-      $( "#answer-" + answer ).css("opacity" , "1");
-      $( ".submitButton" )
-          .delay(500)
-          .queue(function (next) { 
-            $(this).css("-webkit-box-shadow" , "0px 0px 0 10px rgba(100, 35, 49, 0.1)");
-            $(this).css("box-shadow" , "0px 0px 0 10px rgba(100, 35, 49, 0.1)");
-            next(); 
-          });
-      $( ".submitButton" )
-          .delay(2000)
-          .queue(function (next) { 
-            $(this).css("-webkit-box-shadow" , "0px 0px 0 2px rgba(100, 35, 49, 0.1)");
-            $(this).css("box-shadow" , "0px 0px 0 2px rgba(100, 35, 49, 0.1)");
-            next(); 
-          });    
-      $( ".skipButton").css("opacity" , "0.5");
-    }
-    </script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
@@ -50,19 +29,19 @@
           <div class="question">
             <h3 id="questionStatement">What is your current mood?</h3>
             <table id="answersTable" align="center">
-                <tbody><tr id="hide-a" onclick="setAnswer('a')">
+                <tbody><tr id="hide-a" onclick="setActive('a');setAnswer('a')">
                   <td class="answerWrapper" id="answer-a"><span class="answerOption" id="answer1"> </span><br></td>
                 </tr>
-                <tr id="hide-b" onclick="setAnswer('b')">
+                <tr id="hide-b" onclick="setActive('b');setAnswer('b')">
                   <td class="answerWrapper" id="answer-b"><span class="answerOption" id="answer2"> </span><br></td>
                 </tr>
-                <tr id="hide-c" onclick="setAnswer('c')">
+                <tr id="hide-c" onclick="setActive('c');setAnswer('c')">
                   <td class="answerWrapper" id="answer-c"><span class="answerOption" id="answer3"> </span><br></td>
                 </tr>
-                <tr id="hide-d" onclick="setAnswer('d')">
+                <tr id="hide-d" onclick="setActive('d');setAnswer('d')">
                   <td class="answerWrapper" id="answer-d"><span class="answerOption" id="answer4"> </span><br></td>
                 </tr>
-                <tr id="hide-e" onclick="setAnswer('e')">
+                <tr id="hide-e" onclick="setActive('e');setAnswer('e')">
                   <td class="answerWrapper" id="answer-e"><span class="answerOption" id="answer5"> </span><br></td>
                   </tr>
             </tbody></table>
@@ -81,7 +60,7 @@
             <div class="buttons">
               <div onclick="questionTwo()" class="submitButton">submit</div>
               <div onclick="questionTwo()" class="skipButton">or skip this question</div>
-            </div>            
+            </div>           
           </div>
       </div>
       </div>	
@@ -91,6 +70,27 @@
       
            <!-- JavaScript libraries -->
       <script>
+        function setActive(answer) {
+          $( ".answerWrapper" ).css("opacity" , "0.5");
+          $( "#answer-" + answer ).css("opacity" , "1");
+          $( ".submitButton" )
+              .delay(500)
+              .queue(function (next) { 
+                $(this).css("-webkit-box-shadow" , "0px 0px 0 10px rgba(100, 35, 49, 0.1)");
+                $(this).css("box-shadow" , "0px 0px 0 10px rgba(100, 35, 49, 0.1)");
+                next(); 
+              });
+          $( ".submitButton" )
+              .delay(2000)
+              .queue(function (next) { 
+                $(this).css("-webkit-box-shadow" , "0px 0px 0 2px rgba(100, 35, 49, 0.1)");
+                $(this).css("box-shadow" , "0px 0px 0 2px rgba(100, 35, 49, 0.1)");
+                next(); 
+              });    
+          $( ".skipButton").css("opacity" , "0.5");
+          var selectedAnswer = $( "#answer-" + answer ).html();
+          localStorage.setItem("selectedAnswer", selectedAnswer);
+        }
         $(function() {
           // $( "#firstline" ).fadeIn( "2000");
           // $( "#firstline" ).delay(3000).fadeOut( "2000");
@@ -98,10 +98,10 @@
           // $( "#secondline" ).delay(4000).fadeOut( "2000");
           // $( ".question" ).delay(9000).slideDown( "2000");
           $( "#answer-a" ).html("Happy");
-          $( "#answer-b" ).html("Tired");
-          $( "#answer-c" ).html("Lonely");
-          $( "#answer-d" ).html("Stressed");
-          $( "#answer-e" ).html("Bored");
+          $( "#answer-b" ).html("Stressed");
+          $( "#answer-c" ).html("Bored");
+          $( "#answer-d" ).html("Excited");
+          $( "#answer-e" ).html("Angry");
           $( ".question" ).delay(0).slideDown( "2000");
         });
         function questionTwo(){
@@ -126,6 +126,7 @@
           $( "#hide-d" ).css("display" , "none");
           $( "#hide-e" ).css("display" , "none");
           $(".submitButton").attr("onclick","questionFour()");
+          $('.skipButton').attr("onclick", "questionFour()");
         } 
         function questionFour(){
           $( ".answerWrapper" ).css("opacity" , "1");
@@ -135,6 +136,7 @@
           $( "#actorcompletefield" ).slideDown();
           $(".submitButton").attr("onclick","questionFive()");
           $("#addActorBtn").attr("onclick","addActor()");
+          $('.skipButton').attr("onclick", "questionFive()");
         } 
         function addActor() {
           var selectedActor = $("#actorInput").val();
@@ -153,6 +155,7 @@
           $( "#actorcompletefield" ).slideDown();
           $(".submitButton").attr("onclick","show_results()");
           $("#addActorBtn").attr("onclick","addActor()");
+          $('.skipButton').attr("onclick", "show_results()");
         } 
    
          function show_results(){
@@ -168,7 +171,7 @@
 		<script src="js/Chart.min.js"></script>
 		<script src="js/angular-chart.min.js"></script>	
 		<script src="main.js"></script>
-
+    <script src="autocomplete.js"></script>
   </body>
 
 </html>
