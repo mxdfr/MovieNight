@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://example.com/movieont" uri="TestXXXX.ttl"/>
+    <uri id="User Entered Import Resolution" name="file:/C:/Users/ramon/OneDrive/Documenten/Vu%20jaar%202/Knowledge%20and%20Data/Final%20project/dbpediaontology.ttl" uri="dbpediaontology.ttl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
+</catalog>
