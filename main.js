@@ -90,7 +90,7 @@ function omdb(title) {
       var moviePlot = "<br>Plot: " + data.Plot
       var image = document.createElement("img");
       var poster = image.src=data.Poster
-      document.getElementById("omdb").innerHTML += "<div class=\"movieResultWrapper\"><div class=\"movieInformation\">" + movieTitle + movieGenre + movieActors + movieDirector +  movieWriter + movieRuntime + movieAwards + movieReleased + movieWebsite + moviePlot + "</div><img src=\""+ poster + "\"></div>"
+      document.getElementById("omdb").innerHTML += "<div class=\"movieResultWrapper animated slideInUp\"><div class=\"movieInformation\">" + movieTitle + movieGenre + movieActors + movieDirector +  movieWriter + movieRuntime + movieAwards + movieReleased + movieWebsite + moviePlot + "</div><img src=\""+ poster + "\"></div>"
       console.log(data)
     }
   
