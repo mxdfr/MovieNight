@@ -79,12 +79,26 @@ function setAnswer(answer) {
     sessionStorage.queryPart1 = "PREFIX ex: <http://example.com/movieont/> PREFIX owl: <http://www.w3.org/2002/07/owl#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX xml: <http://www.w3.org/XML/1998/namespace> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT?movie ?rating WHERE {"
   }
   else if(answer == 'Friends') {
-    sessionStorage.queryPart1 += " UNION { ?movie ex:has_genre ex:Horror }" 
+    sessionStorage.queryPart2 = " UNION { ?movie ex:has_genre ex:Horror }" 
   }
   else if(answer == 'Boy/Girl -friend') {
-    sessionStorage.queryPart1 += " UNION { ?movie ex:has_genre ex:Horror } UNION { ?movie ex:has_genre ex:Drama }"
+    sessionStorage.queryPart2 = " UNION { ?movie ex:has_genre ex:Horror } UNION { ?movie ex:has_genre ex:Drama }"
   }
   else if(answer == 'Me Myself and I') {
-    sessionStorage.queryPart1 += " ?movie ex:has_genre ?genre . FILTER ( ?genre != ex:Horror )"
+    sessionStorage.queryPart2 = " ?movie ex:has_genre ?genre . FILTER ( ?genre != ex:Horror )"
   }
+}
+
+function ageChecker() {
+  if (parseInt(document.getElementById("ageSlider").value) < 10) {
+    sessionStorage.queryPart3 = " ?movie ex:has_genre ex:Children ."
+  }
+  else {
+    sessionStorage.queryPart3 = ""
+  }
+}
+function mergeQuery() {
+  sessionStorage.queryPart4 = "} ORDER BY DESC(?rating) LIMIT 100"
+  sessionStorage.query = sessionStorage.queryPart1 + sessionStorage.queryPart2 + sessionStorage.queryPart3 + sessionStorage.queryPart4
+  alert(sessionStorage.query)
 }

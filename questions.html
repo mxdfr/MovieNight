@@ -116,6 +116,7 @@
             $('.skipButton').attr("onclick", "questionThree()");
           } 
         function questionThree(){
+          ageChecker()
           $("#answersTable").css("display" , "inline-block");
           $(".slidecontainer").css("display" , "none");
           $( "tr" ).css("display" , "inline-block");
@@ -130,6 +131,7 @@
           $('.skipButton').attr("onclick", "questionFour()");
         } 
         function questionFour(){
+          mergeQuery()
           $(".slidecontainer").css("display" , "none");
           $( ".answerWrapper" ).css("opacity" , "1");
           $( "#questionStatement" ).html("Name a few of your favorite actors:");
