@@ -138,7 +138,6 @@ function ageChecker() {
 function mergeQuery() {
   sessionStorage.queryPart4 = "} ORDER BY DESC(?rating) LIMIT 100"
   sessionStorage.query = sessionStorage.queryPart1 + sessionStorage.queryPart2 + sessionStorage.queryPart3 + sessionStorage.queryPart4
-  alert(sessionStorage.query)
 }
 function sendQuery() {
   document.getElementById("inputField").value = "Hoi"
