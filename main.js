@@ -78,23 +78,27 @@ function omdb(title) {
       }
 
       else{
-      var movieTitle = "Title: " +data.Title
-      var movieGenre = "<br>Genres: " + data.Genre
-      var movieActors = "<br>Actors: " + data.Actors
-      var movieDirector = "<br>Director: " + data.Director
-      var movieWriter = "<br>Writer: " + data.Writer
-      var movieRuntime = "<br>Runtime: " + data.Runtime
-      var movieAwards = "<br>Awards: " + data.Awards
-      var movieReleased = "<br>Release data: " + data.Released
-      var movieWebsite = "<br>Website: " + data.Website
-      var moviePlot = "<br>Plot: " + data.Plot
-      var image = document.createElement("img");
-      var poster = image.src=data.Poster
-      document.getElementById("omdb").innerHTML += "<div class=\"movieResultWrapper animated slideInUp\"><div class=\"movieInformation\">" + movieTitle + movieGenre + movieActors + movieDirector +  movieWriter + movieRuntime + movieAwards + movieReleased + movieWebsite + moviePlot + "</div><img src=\""+ poster + "\"></div>"
-      console.log(data)
-    }
-  
-          });
+        var movieTitle = "Title: " +data.Title
+        var movieGenre = "<br>Genres: " + data.Genre
+        var movieActors = "<br>Actors: " + data.Actors
+        var movieDirector = "<br>Director: " + data.Director
+        var movieWriter = "<br>Writer: " + data.Writer
+        var movieRuntime = "<br>Runtime: " + data.Runtime
+        var movieAwards = "<br>Awards: " + data.Awards
+        var movieReleased = "<br>Release data: " + data.Released
+        var movieWebsite = "<br>Website: <a href=\"" + data.Website + "\">" + data.Website + "</a>" 
+        var moviePlot = "<br>Plot: " + data.Plot
+        var image = document.createElement("img");
+        var poster = image.src=data.Poster
+        if (movieWebsite.indexOf('http://') >= 0) {
+          document.getElementById("omdb").innerHTML += "<div class=\"movieResultWrapper animated slideInUp\"><div class=\"movieInformation\">" + movieTitle + movieGenre + movieActors + movieDirector +  movieWriter + movieRuntime + movieAwards + movieReleased + "<span id=\"websiteTag\">" + movieWebsite + "</span>" + moviePlot + "</div><img src=\""+ poster + "\"></div>"
+        }
+        else {
+          document.getElementById("omdb").innerHTML += "<div class=\"movieResultWrapper animated slideInUp\"><div class=\"movieInformation\">" + movieTitle + movieGenre + movieActors + movieDirector +  movieWriter + movieRuntime + movieAwards + movieReleased + moviePlot + "</div><img src=\""+ poster + "\"></div>"
+        }  
+      }
+      
+    });
   }
 
 function setAnswer(answer) {
