@@ -17,16 +17,6 @@ function mainCtrl($scope, $http, ChartJsProvider){
 	// The function needs to include : some arguments sent by the html + an http call to the sparql endpoint + a variable storing the results to be visualised    
 	// use the native function encodeURI(mySparqlQuery) to encode your query as a URL
 	$scope.fireInteraction = function(){
-    var xhr = new XMLHttpRequest();
-
-    xhr.open(method, url);
-
-    xhr.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-    xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
-
-    var text = {"command":"PUSH"};
-    xhr.send(text);
-    
 		$http( {
  			method: "GET",
 			url : $scope.myQuery = $scope.mysparqlendpoint+encodeURI($scope.myInput).replace(/#/g, '%23'),
@@ -39,7 +29,7 @@ function mainCtrl($scope, $http, ChartJsProvider){
 	    		console.log('Error '+error);
 			});
 	};
-  
+
 }
 function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
