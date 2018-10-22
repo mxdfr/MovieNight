@@ -118,6 +118,7 @@ html, body {
     min-height: 100vh;
     background-size: cover;
     position: absolute;
+    background-position: top center;
     top: 0; bottom: 0; left: 0; right: 0;
     margin: auto;
     h1 {
@@ -182,6 +183,7 @@ html, body {
 .final-page {
     background-image: url('../images/background.png');
     min-height: 100vh;
+    background-position: top center;
     background-size: cover;
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
@@ -200,6 +202,24 @@ html, body {
             content: ' -'
         }
     }
+    .movieResultWrapper {
+        background-color: rgba(255, 255, 255, 0.12156862745098039);
+        border: 2px solid rgba(255, 255, 255, 0.25882352941176473);
+        border-radius: 20px;
+        padding: 30px;
+        margin-bottom: 30px;
+        overflow: auto;
+        .movieInformation {
+            width: 60%;
+            float: left;
+        }
+        img {
+            height: 350px;
+            float: right;
+            border-radius: 10px;
+        }
+    }
+    
 }
 //////////////  QUESTIONS PAGE
 .question-page {
