@@ -8,27 +8,6 @@
     <title> Movie Night </title>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-    function setAnswer(answer) {
-      $( ".answerWrapper" ).css("opacity" , "0.5");
-      $( "#answer-" + answer ).css("opacity" , "1");
-      $( ".submitButton" )
-          .delay(500)
-          .queue(function (next) { 
-            $(this).css("-webkit-box-shadow" , "0px 0px 0 10px rgba(100, 35, 49, 0.1)");
-            $(this).css("box-shadow" , "0px 0px 0 10px rgba(100, 35, 49, 0.1)");
-            next(); 
-          });
-      $( ".submitButton" )
-          .delay(2000)
-          .queue(function (next) { 
-            $(this).css("-webkit-box-shadow" , "0px 0px 0 2px rgba(100, 35, 49, 0.1)");
-            $(this).css("box-shadow" , "0px 0px 0 2px rgba(100, 35, 49, 0.1)");
-            next(); 
-          });    
-      $( ".skipButton").css("opacity" , "0.5");
-    }
-    </script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
@@ -91,6 +70,27 @@
       
            <!-- JavaScript libraries -->
       <script>
+        function setAnswer(answer) {
+          $( ".answerWrapper" ).css("opacity" , "0.5");
+          $( "#answer-" + answer ).css("opacity" , "1");
+          $( ".submitButton" )
+              .delay(500)
+              .queue(function (next) { 
+                $(this).css("-webkit-box-shadow" , "0px 0px 0 10px rgba(100, 35, 49, 0.1)");
+                $(this).css("box-shadow" , "0px 0px 0 10px rgba(100, 35, 49, 0.1)");
+                next(); 
+              });
+          $( ".submitButton" )
+              .delay(2000)
+              .queue(function (next) { 
+                $(this).css("-webkit-box-shadow" , "0px 0px 0 2px rgba(100, 35, 49, 0.1)");
+                $(this).css("box-shadow" , "0px 0px 0 2px rgba(100, 35, 49, 0.1)");
+                next(); 
+              });    
+          $( ".skipButton").css("opacity" , "0.5");
+          var selectedAnswer = $( "#answer-" + answer ).html();
+          localStorage.setItem("selectedAnswer", selectedAnswer);
+        }
         $(function() {
           // $( "#firstline" ).fadeIn( "2000");
           // $( "#firstline" ).delay(3000).fadeOut( "2000");
@@ -105,6 +105,9 @@
           $( ".question" ).delay(0).slideDown( "2000");
         });
         function questionTwo(){
+            localStorage.setItem("answerList", "[]");
+            answerList.push(localStorage.getItem("selectedAnswer"));
+            console.log(answerList);
             $( "tr" ).css("display" , "inline-block");
             $( ".answerWrapper" ).css("opacity" , "1");
             $( "#questionStatement" ).html("With who are you watching?");
@@ -117,6 +120,8 @@
             $('.skipButton').attr("onclick", "questionThree()");
           } 
         function questionThree(){
+          answerList.push(localStorage.getItem("selectedAnswer"));
+          console.log(answerList);
           $( "tr" ).css("display" , "inline-block");
           $( ".answerWrapper" ).css("opacity" , "1");
           $( "#questionStatement" ).html("Do you like horror movies?");
@@ -129,6 +134,8 @@
           $('.skipButton').attr("onclick", "questionFour()");
         } 
         function questionFour(){
+          answerList.push(localStorage.getItem("selectedAnswer"));
+          console.log(answerList);
           $( ".answerWrapper" ).css("opacity" , "1");
           $( "#questionStatement" ).html("Name a few of your favorite actors:");
           $( "#answersTable" ).css("display" , "none");
