@@ -105,9 +105,6 @@
           $( ".question" ).delay(0).slideDown( "2000");
         });
         function questionTwo(){
-            localStorage.setItem("answerList", "[]");
-            answerList.push(localStorage.getItem("selectedAnswer"));
-            console.log(answerList);
             $( "tr" ).css("display" , "inline-block");
             $( ".answerWrapper" ).css("opacity" , "1");
             $( "#questionStatement" ).html("With who are you watching?");
@@ -120,8 +117,6 @@
             $('.skipButton').attr("onclick", "questionThree()");
           } 
         function questionThree(){
-          answerList.push(localStorage.getItem("selectedAnswer"));
-          console.log(answerList);
           $( "tr" ).css("display" , "inline-block");
           $( ".answerWrapper" ).css("opacity" , "1");
           $( "#questionStatement" ).html("Do you like horror movies?");
@@ -134,8 +129,6 @@
           $('.skipButton').attr("onclick", "questionFour()");
         } 
         function questionFour(){
-          answerList.push(localStorage.getItem("selectedAnswer"));
-          console.log(answerList);
           $( ".answerWrapper" ).css("opacity" , "1");
           $( "#questionStatement" ).html("Name a few of your favorite actors:");
           $( "#answersTable" ).css("display" , "none");
