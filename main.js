@@ -23,7 +23,34 @@ function mainCtrl($scope, $http, ChartJsProvider){
 			headers : {'Accept':'application/sparql-results+json', 'Content-Type':'application/sparql-results+json'}
 			} )
 			.success(function(data, status ) {
-	      	$scope.result = data;
+          $scope.result = data;
+          console.log(data)
+          // // Use the console to see how your response looks like
+// console.log(data);
+$scope.myDynamicLabels = [];
+$scope.myDynamicData = [];
+				  
+ // now iterate on the results
+angular.forEach(data.results.bindings, function(val) {
+	$scope.myDynamicLabels.push(val.movie.value);
+	$scope.myDynamicData.push(val.rating.value);
+});
+console.log($scope.myDynamicLabels[0])
+movie1 = $scope.myDynamicLabels[0]
+movie1 = movie1.split('/')
+movie1 = movie1[movie1.length-1]
+movie2 = $scope.myDynamicLabels[1]
+movie2 = movie2.split('/')
+movie2 = movie2[movie2.length-1]
+movie3 = $scope.myDynamicLabels[2]
+movie3 = movie3.split('/')
+movie3 = movie3[movie3.length-1]
+$("#movie1").html(movie1);
+$("#rating").html($scope.myDynamicData[0]);
+$("#movie2").html(movie2);
+$("#rating2").html($scope.myDynamicData[1]);
+$("#movie3").html(movie3);
+$("#rating3").html($scope.myDynamicData[2]);
   		})
 			.error(function(error ){
 	    		console.log('Error '+error);
