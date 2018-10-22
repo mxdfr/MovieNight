@@ -78,20 +78,19 @@ function omdb(title) {
       }
 
       else{
-      document.getElementById("omdb").innerHTML += "Title: " +data.Title
-      document.getElementById("omdb").innerHTML += "<br>Genres: " + data.Genre
-      document.getElementById("omdb").innerHTML += "<br>Actors: " + data.Actors
-      document.getElementById("omdb").innerHTML += "<br>Director: " + data.Director
-      document.getElementById("omdb").innerHTML += "<br>Writer: " + data.Writer
-      document.getElementById("omdb").innerHTML += "<br>Runtime: " + data.Runtime
-      document.getElementById("omdb").innerHTML += "<br>Awards: " + data.Awards
-      document.getElementById("omdb").innerHTML += "<br>Release data: " + data.Released
-      document.getElementById("omdb").innerHTML += "<br>Website: " + data.Website
-      document.getElementById("omdb").innerHTML += "<br>Plot: " + data.Plot
-  
+      var movieTitle = "Title: " +data.Title
+      var movieGenre = "<br>Genres: " + data.Genre
+      var movieActors = "<br>Actors: " + data.Actors
+      var movieDirector = "<br>Director: " + data.Director
+      var movieWriter = "<br>Writer: " + data.Writer
+      var movieRuntime = "<br>Runtime: " + data.Runtime
+      var movieAwards = "<br>Awards: " + data.Awards
+      var movieReleased = "<br>Release data: " + data.Released
+      var movieWebsite = "<br>Website: " + data.Website
+      var moviePlot = "<br>Plot: " + data.Plot
       var image = document.createElement("img");
-      image.src=data.Poster
-      document.getElementById("omdb").append(image)
+      var poster = image.src=data.Poster
+      document.getElementById("omdb").innerHTML += "<div class=\"movieResultWrapper animated slideInUp\"><div class=\"movieInformation\">" + movieTitle + movieGenre + movieActors + movieDirector +  movieWriter + movieRuntime + movieAwards + movieReleased + movieWebsite + moviePlot + "</div><img src=\""+ poster + "\"></div>"
       console.log(data)
     }
   
