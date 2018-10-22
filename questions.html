@@ -35,7 +35,8 @@
     <link href="css/animate.css" rel="stylesheet">
   </head>
 
-  <body  ng-controller="MainCtrl" class="question-page">		
+  <body  ng-controller="MainCtrl" class="question-page">
+      <div id="questionpage">	
       <div class="animated slideInDown nav">
         <h1 class="logo"><a href="index.html">movie<strong> night</strong></a></h1>
       </div>
@@ -80,10 +81,14 @@
             <div class="buttons">
               <div onclick="questionTwo()" class="submitButton">submit</div>
               <div onclick="questionTwo()" class="skipButton">or skip this question</div>
-            </div>
-            
+            </div>            
           </div>
       </div>
+      </div>	
+      <div id="next-page">
+          <div class="filmrol"><img src="images/filmrol.gif"></div>
+      </div>
+      
            <!-- JavaScript libraries -->
       <script>
         $(function() {
@@ -142,13 +147,21 @@
         function questionFive(){
           $( "#selectedactors" ).css("display" , "none");
           $( ".answerWrapper" ).css("opacity" , "1");
-          $( "#questionStatement" ).html("Name a few of your favorite actors:");
+          $( "#questionStatement" ).html("lastq");
           $( "#answersTable" ).css("display" , "none");
           $( "#selectedactors" ).slideDown();
           $( "#actorcompletefield" ).slideDown();
-          $(".submitButton").attr("onclick","questionFive()");
+          $(".submitButton").attr("onclick","show_results()");
           $("#addActorBtn").attr("onclick","addActor()");
         } 
+   
+         function show_results(){
+					$( "#questionpage" ).fadeOut( "slow");
+					$( "#next-page" ).delay(500).fadeIn( "slow");
+					$( ".filmrol" ).delay(1800).fadeOut( "slow", function() {
+						window.location.href = "final.html";
+					});
+      }
     </script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="js/angular.min.js"></script>
