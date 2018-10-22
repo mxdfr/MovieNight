@@ -29,19 +29,19 @@
           <div class="question">
             <h3 id="questionStatement">What is your current mood?</h3>
             <table id="answersTable" align="center">
-                <tbody><tr id="hide-a" onclick="setActive('a');setAnswer('a')">
+                <tbody><tr id="hide-a" onclick="setActive('a');setAnswer(document.getElementById('answer-a').innerHTML)">
                   <td class="answerWrapper" id="answer-a"><span class="answerOption" id="answer1"> </span><br></td>
                 </tr>
-                <tr id="hide-b" onclick="setActive('b');setAnswer('b')">
+                <tr id="hide-b" onclick="setActive('b');setAnswer(document.getElementById('answer-b').innerHTML)">
                   <td class="answerWrapper" id="answer-b"><span class="answerOption" id="answer2"> </span><br></td>
                 </tr>
-                <tr id="hide-c" onclick="setActive('c');setAnswer('c')">
+                <tr id="hide-c" onclick="setActive('c');setAnswer(document.getElementById('answer-c').innerHTML)">
                   <td class="answerWrapper" id="answer-c"><span class="answerOption" id="answer3"> </span><br></td>
                 </tr>
-                <tr id="hide-d" onclick="setActive('d');setAnswer('d')">
+                <tr id="hide-d" onclick="setActive('d');setAnswer(document.getElementById('answer-d').innerHTML)">
                   <td class="answerWrapper" id="answer-d"><span class="answerOption" id="answer4"> </span><br></td>
                 </tr>
-                <tr id="hide-e" onclick="setActive('e');setAnswer('e')">
+                <tr id="hide-e" onclick="setActive('e');setAnswer(document.getElementById('answer-e').innerHTML)">
                   <td class="answerWrapper" id="answer-e"><span class="answerOption" id="answer5"> </span><br></td>
                   </tr>
             </tbody></table>
@@ -59,7 +59,7 @@
             </form>
             <div class="buttons">
               <div onclick="questionTwo()" class="submitButton">submit</div>
-              <div onclick="questionTwo()" class="skipButton">or skip this question</div>
+              <div onclick="questionTwo();setAnswer('Empty')" class="skipButton">or skip this question</div>
             </div>           
           </div>
       </div>
@@ -109,9 +109,9 @@
             $( ".answerWrapper" ).css("opacity" , "1");
             $( "#questionStatement" ).html("With who are you watching?");
             $( "#answer-a" ).html("Friends");
-            $( "#answer-b" ).html("Family");
-            $( "#answer-c" ).html("Boy / Girl -friend");
-            $( "#answer-d" ).html("Me Myself and I");
+            $( "#answer-b" ).html("Boy/Girl -friend");
+            $( "#answer-c" ).html("Me Myself and I");
+            $( "#hide-d" ).css("display" , "none");
             $( "#hide-e" ).css("display" , "none");
             $(".submitButton").attr("onclick","questionThree()");
             $('.skipButton').attr("onclick", "questionThree()");
