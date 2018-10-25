@@ -575,9 +575,31 @@ html, body {
   color: #fff;
 }
 
-/* line 516, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+/* line 515, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+.fa {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* line 519, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 #omdb {
   color: #fff;
+}
+
+/* line 520, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+#omdb .movieTitle {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+/* line 526, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
+#omdb #websiteTag a {
+  color: #ffffff;
+  background-color: #ffffff17 !important;
+  padding: 3px 10px;
+  border: 1px solid grey;
+  border-radius: 12px;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=../css/style.map */

@@ -11,22 +11,28 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
 		<link href="./css/style.css" rel="stylesheet">
-		<link href="css/animate.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   </head>
 
   <body  ng-controller="MainCtrl" class="final-page" onload="sendQuery()">
       <div class="content-wrapper"> 
-          <h1>Your top movie Results</h1> 
+          <h1>Your selection:</h1> 
+          <center><p style="color:#ffffff;">We've selected the following movies based on your preferences</p></center>
       <div class="input-group mb-3" style="display: none">
             <input type="text" class="form-control" ng-model="myInput" placeholder="Type here" id="inputField">
             <div class="input-group-append">
           <button class="btn btn-outline-secondary" ng-click="fireInteraction()" type="button" id="inputButton">GO!</button>
             </div>
           </div>
-       
+          
+          <div class="actorInformationBox">
+          </div>
+
           <div class="card-body">
               <p class="card-text">
-              <div id="omdb" class="in-grid"></div>
+              <div id="omdb" class="in-grid">
+              </div>
           </p>
           
           </div>

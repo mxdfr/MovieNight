@@ -512,7 +512,24 @@ html, body {
 #final_table{
     color: #fff;
 }
-
+.fa {
+    font-size: 12px;
+    opacity: 0.6;
+}
 #omdb{
+    .movieTitle {
+        font-weight: 600;
+        font-size: 22px;
+    }
     color: #fff;
+    #websiteTag {
+        a {
+            color: #ffffff;
+            background-color: #ffffff17 !important;
+            padding: 3px 10px;
+            border: 1px solid grey;
+            border-radius: 12px;
+            text-decoration: none;
+        }
+    }
 }

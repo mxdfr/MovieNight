@@ -96,11 +96,11 @@
           localStorage.setItem("selectedAnswer", selectedAnswer);
         }
         $(function() {
-          // $( "#firstline" ).fadeIn( "2000");
-          // $( "#firstline" ).delay(3000).fadeOut( "2000");
-          // $( "#secondline" ).delay(4000).fadeIn( "2000");
-          // $( "#secondline" ).delay(4000).fadeOut( "2000");
-          // $( ".question" ).delay(9000).slideDown( "2000");
+          // $( "#firstline" ).fadeIn( "1000");
+          // $( "#firstline" ).delay(2000).fadeOut( "2000");
+          // $( "#secondline" ).delay(3000).fadeIn( "2000");
+          // $( "#secondline" ).delay(3000).fadeOut( "2000");
+          // $( ".question" ).delay(7000).slideDown( "2000");
           $( "#answer-a" ).html("Happy");
           $( "#answer-b" ).html("Stressed");
           $( "#answer-c" ).html("Bored");
@@ -111,7 +111,7 @@
         function questionTwo(){
             $(".slidecontainer").css("display" , "inline-block");
             $("#answersTable").css("display" , "none");
-            $( "#questionStatement" ).html("What is your age?");
+            $("#questionStatement").html("What is your age?");
             $(".submitButton").attr("onclick","questionThree()");
             $('.skipButton').attr("onclick", "questionThree()");
           } 
