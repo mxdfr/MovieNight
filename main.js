@@ -24,7 +24,6 @@ function mainCtrl($scope, $http, ChartJsProvider){
 			} )
 			.success(function(data, status ) {
           $scope.result = data;
-          console.log(data)
           // // Use the console to see how your response looks like
 // console.log(data);
 $scope.myDynamicLabels = [];
@@ -35,11 +34,6 @@ angular.forEach(data.results.bindings, function(val) {
 	$scope.myDynamicLabels.push(val.movie.value);
 	$scope.myDynamicData.push(val.rating.value);
 });
-console.log($scope.myDynamicLabels[0])
-console.log($scope.myDynamicLabels[1])
-console.log($scope.myDynamicLabels[2])
-console.log($scope.myDynamicLabels[3])
-console.log($scope.myDynamicLabels[4])
 movie1 = $scope.myDynamicLabels[0]
 movie1 = movie1.split('/')
 movie1 = movie1[movie1.length-1]
@@ -90,6 +84,11 @@ function omdb(title) {
         var moviePlot = "<br>Plot: " + data.Plot
         var image = document.createElement("img");
         var poster = image.src=data.Poster
+        var actorList = data.Actors.split(',');
+        var i;
+        for (i=0; i < actorList.length; i++) {
+          console.log(actorList[i])
+        }
         if (movieWebsite.indexOf('http://') >= 0) {
           document.getElementById("omdb").innerHTML += "<div class=\"movieResultWrapper animated slideInUp\"><div class=\"movieInformation\">" + "<span class=\"movieTitle\">" + movieTitle + "</span>" + movieGenre + movieActors + movieDirector +  movieWriter + movieRuntime + movieAwards + movieReleased + "<span id=\"websiteTag\">" + movieWebsite + "</span>" + moviePlot + "</div><img src=\""+ poster + "\"></div>"
         }
