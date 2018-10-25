@@ -128,7 +128,6 @@ function setAnswer(answer) {
   else if(answer == 'Me Myself and I') {
     sessionStorage.queryPart2 = " ?movie ex:has_genre ?genre . FILTER ( ?genre != ex:Horror )"
   }
-  alert(sessionStorage.queryPart1, sessionStorage.queryPart2)
 }
 
 function ageChecker() {
@@ -138,17 +137,14 @@ function ageChecker() {
   else {
     sessionStorage.queryPart3 = ""
   }
-  alert(sessionStorage.queryPart1, sessionStorage.queryPart3)
 
 }
 function mergeQuery() {
   if (typeof sessionStorage.queryPart2 == 'undefined') {
-    alert('x')
     sessionStorage.queryPart2 = ""
   }
   sessionStorage.queryPart4 = "} ORDER BY DESC(?rating) LIMIT 100"
   sessionStorage.query = sessionStorage.queryPart1 + sessionStorage.queryPart2 + sessionStorage.queryPart3 + sessionStorage.queryPart4
-  alert(sessionStorage.query)
 
 }
 function sendQuery() {
