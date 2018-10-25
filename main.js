@@ -139,6 +139,15 @@ function ageChecker() {
     sessionStorage.queryPart3 = ""
   }
 }
+
+function addActorQuery(){
+  for (i in sessionStorage.Actorlist){
+    alert(i)
+    sessionStorage.queryPart5 = "?movie dbo:starring dbr" + i
+    console.log(sessionStorage.queryPart5)
+  }
+}
+
 function mergeQuery() {
   sessionStorage.queryPart4 = "} ORDER BY DESC(?rating) LIMIT 100"
   sessionStorage.query = sessionStorage.queryPart1 + sessionStorage.queryPart2 + sessionStorage.queryPart3 + sessionStorage.queryPart4
