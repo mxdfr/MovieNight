@@ -131,7 +131,6 @@
           $('.skipButton').attr("onclick", "questionFour()");
         } 
         function questionFour(){
-          mergeQuery()
           $(".slidecontainer").css("display" , "none");
           $( ".answerWrapper" ).css("opacity" , "1");
           $( "#questionStatement" ).html("Name a few of your favorite actors:");
@@ -144,10 +143,11 @@
           $('.skipButton').attr("onclick", "show_results()");
         }
         function lastThings(){
-          // show_results()
           make_actor_list()
-          addActorQuery()
+          mergeQuery()
+          show_results()
         }
+        var ActorList = {}
         function addActor() {
           var selectedActor = $("#actorInput").val();
           if ($("#actorInput").val() == ""){
@@ -170,8 +170,9 @@
                 Actorlist.push(col.innerHTML)
 }
 }
-sessionStorage.Actorlist = list(Actorlist)
-console.log(sessionStorage.Actorlist)
+// sessionStorage.Actorlist = list(Actorlist)
+// console.log(sessionStorage.Actorlist)
+addActorQuery(Actorlist)
         }
          function show_results(){
 					$( "#questionpage" ).fadeOut( "slow");
