@@ -37,26 +37,33 @@ angular.forEach(data.results.bindings, function(val) {
 movie1 = $scope.myDynamicLabels[0]
 movie1 = movie1.split('/')
 movie1 = movie1[movie1.length-1]
+console.log(movie1)
 omdb(movie1)
 
 movie2 = $scope.myDynamicLabels[1]
 movie2 = movie2.split('/')
 movie2 = movie2[movie2.length-1]
+console.log(movie2)
 omdb(movie2)
 
 movie3 = $scope.myDynamicLabels[2]
 movie3 = movie3.split('/')
 movie3 = movie3[movie3.length-1]
+console.log(movie3)
+
 omdb(movie3)
 
 movie4 = $scope.myDynamicLabels[3]
 movie4 = movie4.split('/')
 movie4 = movie4[movie4.length-1]
+console.log(movie4)
+
 omdb(movie4)
 
 movie5 = $scope.myDynamicLabels[4]
 movie5 = movie5.split('/')
 movie5 = movie5[movie5.length-1]
+console.log(movie5)
 omdb(movie5)
   		})
 			.error(function(error ){
@@ -134,7 +141,7 @@ function setAnswer(answer) {
     sessionStorage.queryPart1 = "PREFIX ex: <http://example.com/movieont/> PREFIX owl: <http://www.w3.org/2002/07/owl#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX xml: <http://www.w3.org/XML/1998/namespace> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT?movie ?rating WHERE { ?movie ex:has_movieId ?id . ?id ex:has_rating ?rating . ?movie ex:has_year ?year . FILTER ( ?year > 2000 ) {?movie ex:has_genre ex:Comedy } UNION {?movie ex:has_genre ex:Fantasy}"
   }
   else if(answer == 'Empty') {
-    sessionStorage.queryPart1 = "PREFIX ex: <http://example.com/movieont/> PREFIX owl: <http://www.w3.org/2002/07/owl#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX xml: <http://www.w3.org/XML/1998/namespace> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT?movie ?rating WHERE {"
+    sessionStorage.queryPart1 = "PREFIX ex: <http://example.com/movieont/> PREFIX owl: <http://www.w3.org/2002/07/owl#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX xml: <http://www.w3.org/XML/1998/namespace> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT?movie ?rating WHERE { ?movie ex:has_movieId ?id . ?id ex:has_rating ?rating ."
   }
   else if(answer == 'Friends') {
     sessionStorage.queryPart2 = " UNION { ?movie ex:has_genre ex:Horror }" 
@@ -154,12 +161,25 @@ function ageChecker() {
   else {
     sessionStorage.queryPart3 = ""
   }
+
 }
 function mergeQuery() {
+  if (typeof sessionStorage.queryPart2 == 'undefined') {
+    sessionStorage.queryPart2 = ""
+  }
   sessionStorage.queryPart4 = "} ORDER BY DESC(?rating) LIMIT 100"
   sessionStorage.query = sessionStorage.queryPart1 + sessionStorage.queryPart2 + sessionStorage.queryPart3 + sessionStorage.queryPart4
+
 }
 function sendQuery() {
   document.getElementById("inputField").value = "Hoi"
   document.getElementById("inputButton").click()
+}
+
+function resetSession() {
+  sessionStorage.query = ""
+  sessionStorage.queryPart1 = ""  
+  sessionStorage.queryPart2 = ""  
+  sessionStorage.queryPart3 = ""  
+  sessionStorage.queryPart4 = ""  
 }
