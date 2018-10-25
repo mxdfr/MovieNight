@@ -118,7 +118,7 @@ function setAnswer(answer) {
     sessionStorage.queryPart1 = "PREFIX ex: <http://example.com/movieont/> PREFIX owl: <http://www.w3.org/2002/07/owl#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX xml: <http://www.w3.org/XML/1998/namespace> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT?movie ?rating WHERE { ?movie ex:has_movieId ?id . ?id ex:has_rating ?rating . ?movie ex:has_year ?year . FILTER ( ?year > 2000 ) {?movie ex:has_genre ex:Comedy } UNION {?movie ex:has_genre ex:Fantasy}"
   }
   else if(answer == 'Empty') {
-    sessionStorage.queryPart1 = "PREFIX ex: <http://example.com/movieont/> PREFIX owl: <http://www.w3.org/2002/07/owl#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX xml: <http://www.w3.org/XML/1998/namespace> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT?movie ?rating WHERE {"
+    sessionStorage.queryPart1 = "PREFIX ex: <http://example.com/movieont/> PREFIX owl: <http://www.w3.org/2002/07/owl#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX xml: <http://www.w3.org/XML/1998/namespace> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT?movie ?rating WHERE { ?movie ex:has_movieId ?id . ?id ex:has_rating ?rating ."
   }
   else if(answer == 'Friends') {
     sessionStorage.queryPart2 = " UNION { ?movie ex:has_genre ex:Horror }" 
@@ -129,6 +129,7 @@ function setAnswer(answer) {
   else if(answer == 'Me Myself and I') {
     sessionStorage.queryPart2 = " ?movie ex:has_genre ?genre . FILTER ( ?genre != ex:Horror )"
   }
+  alert(sessionStorage.queryPart1, sessionStorage.queryPart2)
 }
 
 function ageChecker() {
@@ -138,12 +139,28 @@ function ageChecker() {
   else {
     sessionStorage.queryPart3 = ""
   }
+  alert(sessionStorage.queryPart1, sessionStorage.queryPart3)
+
 }
 function mergeQuery() {
+  if (typeof sessionStorage.queryPart2 == 'undefined') {
+    alert('x')
+    sessionStorage.queryPart2 = ""
+  }
   sessionStorage.queryPart4 = "} ORDER BY DESC(?rating) LIMIT 100"
   sessionStorage.query = sessionStorage.queryPart1 + sessionStorage.queryPart2 + sessionStorage.queryPart3 + sessionStorage.queryPart4
+  alert(sessionStorage.query)
+
 }
 function sendQuery() {
   document.getElementById("inputField").value = "Hoi"
   document.getElementById("inputButton").click()
+}
+
+function resetSession() {
+  sessionStorage.query = ""
+  sessionStorage.queryPart1 = ""  
+  sessionStorage.queryPart2 = ""  
+  sessionStorage.queryPart3 = ""  
+  sessionStorage.queryPart4 = ""  
 }
