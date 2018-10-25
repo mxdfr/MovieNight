@@ -575,9 +575,31 @@ html, body {
   color: #fff;
 }
 
-/* line 516, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 515, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+.fa {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* line 519, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 #omdb {
   color: #fff;
+}
+
+/* line 520, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+#omdb .movieTitle {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+/* line 526, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+#omdb #websiteTag a {
+  color: #ffffff;
+  background-color: #ffffff17 !important;
+  padding: 3px 10px;
+  border: 1px solid grey;
+  border-radius: 12px;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=../css/style.map */
