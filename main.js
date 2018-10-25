@@ -87,7 +87,24 @@ function omdb(title) {
         var actorList = data.Actors.split(',');
         var i;
         for (i=0; i < actorList.length; i++) {
-          console.log(actorList[i])
+          actorList = actorList.map(function (el) {
+            return el.trim();
+          });
+          var url = "http://dbpedia.org/sparql"; 
+          var actorName = actorList[i].split(' ').join('_');
+          var query = "PREFIX dbpedia2: <http://dbpedia.org/resource/> PREFIX Abs: <http://dbpedia.org/ontology/> SELECT ?about WHERE { dbr:"+actorName+" dbo:abstract ?about FILTER (lang(?about) = 'en')}"
+          var queryUrl = encodeURI( url+"?query="+query+"&format=json" );
+          $.ajax({
+              dataType: "jsonp",  
+              url: queryUrl,
+              success: function( _data ) {
+                  var results = _data.results.bindings;
+                  for ( var i in results ) {
+                      var res = results[i].about.value;
+                      console.log(res);
+                  }
+              }
+          });
         }
         if (movieWebsite.indexOf('http://') >= 0) {
           document.getElementById("omdb").innerHTML += "<div class=\"movieResultWrapper animated slideInUp\"><div class=\"movieInformation\">" + "<span class=\"movieTitle\">" + movieTitle + "</span>" + movieGenre + movieActors + movieDirector +  movieWriter + movieRuntime + movieAwards + movieReleased + "<span id=\"websiteTag\">" + movieWebsite + "</span>" + moviePlot + "</div><img src=\""+ poster + "\"></div>"
