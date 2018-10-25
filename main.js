@@ -37,26 +37,33 @@ angular.forEach(data.results.bindings, function(val) {
 movie1 = $scope.myDynamicLabels[0]
 movie1 = movie1.split('/')
 movie1 = movie1[movie1.length-1]
+console.log(movie1)
 omdb(movie1)
 
 movie2 = $scope.myDynamicLabels[1]
 movie2 = movie2.split('/')
 movie2 = movie2[movie2.length-1]
+console.log(movie2)
 omdb(movie2)
 
 movie3 = $scope.myDynamicLabels[2]
 movie3 = movie3.split('/')
 movie3 = movie3[movie3.length-1]
+console.log(movie3)
+
 omdb(movie3)
 
 movie4 = $scope.myDynamicLabels[3]
 movie4 = movie4.split('/')
 movie4 = movie4[movie4.length-1]
+console.log(movie4)
+
 omdb(movie4)
 
 movie5 = $scope.myDynamicLabels[4]
 movie5 = movie5.split('/')
 movie5 = movie5[movie5.length-1]
+console.log(movie5)
 omdb(movie5)
   		})
 			.error(function(error ){
@@ -86,9 +93,6 @@ function omdb(title) {
         var poster = image.src=data.Poster
         var actorList = data.Actors.split(',');
         var i;
-        for (i=0; i < actorList.length; i++) {
-          console.log(actorList[i])
-        }
         if (movieWebsite.indexOf('http://') >= 0) {
           document.getElementById("omdb").innerHTML += "<div class=\"movieResultWrapper animated slideInUp\"><div class=\"movieInformation\">" + "<span class=\"movieTitle\">" + movieTitle + "</span>" + movieGenre + movieActors + movieDirector +  movieWriter + movieRuntime + movieAwards + movieReleased + "<span id=\"websiteTag\">" + movieWebsite + "</span>" + moviePlot + "</div><img src=\""+ poster + "\"></div>"
         }
