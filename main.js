@@ -172,7 +172,7 @@ function mergeQuery() {
 
 }
 function sendQuery() {
-  document.getElementById("inputField").value = "Hoi"
+  document.getElementById("inputField").value = ""
   document.getElementById("inputButton").click()
 }
 
