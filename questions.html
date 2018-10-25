@@ -96,17 +96,17 @@
           localStorage.setItem("selectedAnswer", selectedAnswer);
         }
         $(function() {
-          $( "#firstline" ).fadeIn( "1000");
-          $( "#firstline" ).delay(2000).fadeOut( "2000");
-          $( "#secondline" ).delay(3000).fadeIn( "2000");
-          $( "#secondline" ).delay(3000).fadeOut( "2000");
-          $( ".question" ).delay(7000).slideDown( "2000");
+          // $( "#firstline" ).fadeIn( "1000");
+          // $( "#firstline" ).delay(2000).fadeOut( "2000");
+          // $( "#secondline" ).delay(3000).fadeIn( "2000");
+          // $( "#secondline" ).delay(3000).fadeOut( "2000");
+          // $( ".question" ).delay(7000).slideDown( "2000");
           $( "#answer-a" ).html("Happy");
           $( "#answer-b" ).html("Stressed");
           $( "#answer-c" ).html("Bored");
           $( "#answer-d" ).html("Excited");
           $( "#answer-e" ).html("Angry");
-          // $( ".question" ).delay(0).slideDown( "2000");
+          $( ".question" ).delay(0).slideDown( "2000");
         });
         function questionTwo(){
             $(".slidecontainer").css("display" , "inline-block");
