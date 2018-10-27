@@ -142,7 +142,7 @@ html, body {
         background-color: #fff;
         border-radius: 40px;
         color: #622b30 !important;
-        width: fit-content;
+        width:  fit-content;
         text-align: center;
         padding: 7px 20px;
         height: 40px;
@@ -458,6 +458,28 @@ html, body {
         0%{opacity: 0;}
         100%{opacity: 1;}
     }
+}
+
+.actorButton {
+    border-radius: 10px;
+    margin: auto;
+    background: #131820; 
+    background: -moz-linear-gradient(top, #131820 0%, #532a30 100%); 
+    background: -webkit-linear-gradient(top, #131820 0%,#532a30 100%);
+    background: linear-gradient(to bottom, #131820 0%,#532a30 100%);          
+    border-radius: 50px;
+    padding: 15px;
+    color:#fff;
+    @include transition(1);
+    &:hover {
+        @include transition(1);
+        background: -moz-linear-gradient(top,#864444 0%, #532a30 100%); 
+        background: -webkit-linear-gradient(top, #864444 0%,#532a30 100%);
+        background: linear-gradient(to bottom, #864444 0%,#532a30 100%);
+    }
+}
+#actorDiv {
+    color: #fff;
 }
 
 .slidecontainer {
