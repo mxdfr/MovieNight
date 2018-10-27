@@ -206,4 +206,5 @@ function resetSession() {
   sessionStorage.queryPart2 = ""  
   sessionStorage.queryPart3 = ""  
   sessionStorage.queryPart4 = ""  
+  sessionStorage.queryPart5 = ""
 }
