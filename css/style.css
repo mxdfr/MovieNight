@@ -602,4 +602,23 @@ html, body {
   text-decoration: none;
 }
 
+#dbpedia {
+  color: #fff;
+}
+
+/* line 520, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+#dbpedia .movieTitle {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+/* line 526, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+#dbpedia #websiteTag a {
+  color: #ffffff;
+  background-color: #ffffff17 !important;
+  padding: 3px 10px;
+  border: 1px solid grey;
+  border-radius: 12px;
+  text-decoration: none;
+}
 /*# sourceMappingURL=../css/style.map */

@@ -70,7 +70,6 @@ omdb(movie5)
 	    		console.log('Error '+error);
 			});
 	};
-
 }
 
 function omdb(title) {
@@ -82,6 +81,9 @@ function omdb(title) {
         var movieTitle = data.Title
         var movieGenre = "<br>Genres: " + data.Genre
         var movieActors = "<br>Actors: " + data.Actors
+        linkx = document.createElement('a');
+        linkx.setAttribute('href',"https://stackoverflow.com/questions/5519747/how-to-add-anchor-tags-dynamically-to-a-div-in-javascript")
+        linkx.innerHTML = "link text";
         var movieDirector = "<br>Director: " + data.Director
         var movieWriter = "<br>Writer: " + data.Writer
         var movieRuntime = "<br>Runtime: " + data.Runtime
@@ -101,6 +103,7 @@ function omdb(title) {
           var actorName = actorList[i].split(' ').join('_');
           var query = "PREFIX dbpedia2: <http://dbpedia.org/resource/> PREFIX Abs: <http://dbpedia.org/ontology/> SELECT ?about WHERE { dbr:"+actorName+" dbo:abstract ?about FILTER (lang(?about) = 'en')}"
           var queryUrl = encodeURI( url+"?query="+query+"&format=json" );
+
           $.ajax({
               dataType: "jsonp",  
               url: queryUrl,
@@ -108,16 +111,19 @@ function omdb(title) {
                   var results = _data.results.bindings;
                   for ( var i in results ) {
                       var res = results[i].about.value;
-                      console.log(res);
+                      sessionStorage.actorInfo += res
+                      document.getElementById('actorDiv').innerHTML += title.split('_').join(' ') +"<br>" + res +"<br><br>"
                   }
               }
           });
         }
         if (movieWebsite.indexOf('http://') >= 0) {
-          document.getElementById("omdb").innerHTML += "<div class=\"movieResultWrapper animated slideInUp\"><div class=\"movieInformation\">" + "<span class=\"movieTitle\">" + movieTitle + "</span>" + movieGenre + movieActors + movieDirector +  movieWriter + movieRuntime + movieAwards + movieReleased + "<span id=\"websiteTag\">" + movieWebsite + "</span>" + moviePlot + "</div><img src=\""+ poster + "\"></div>"
+          document.getElementById("omdb").innerHTML += "<div class=\"movieResultWrapper animated slideInUp\"><div class=\"movieInformation\">" + "<span class=\"movieTitle\">" + movieTitle + "</span>" + movieGenre + movieActors + movieDirector +  movieWriter + movieRuntime + movieAwards + movieReleased + "<span id=\"websiteTag\">" + movieWebsite + "</span>" + moviePlot + "</div><img src=\""+ poster + "\"></div></div></div>"
+        
         }
         else {
           document.getElementById("omdb").innerHTML += "<div class=\"movieResultWrapper animated slideInUp\"><div class=\"movieInformation\">" + "<span class=\"movieTitle\">" + movieTitle + "</span>" + movieGenre + movieActors + movieDirector +  movieWriter + movieRuntime + movieAwards + movieReleased + moviePlot + "</div><img src=\""+ poster + "\"></div>"
+
         }  
       }
       
@@ -174,6 +180,14 @@ function mergeQuery() {
 function sendQuery() {
   document.getElementById("inputField").value = ""
   document.getElementById("inputButton").click()
+  var actorDiv = document.createElement("div")
+  actorDiv.setAttribute('id','actorDiv')
+  actorDiv.setAttribute('class', 'movieInformation')
+  actorDiv.setAttribute('class', 'movieResultWrapper animated slideInUp')
+  actorDiv.innerHTML = "<b>We have found information about some actors:<br></b>"
+  document.getElementById('dbpedia').appendChild(actorDiv)
+
+
 }
 
 function resetSession() {
