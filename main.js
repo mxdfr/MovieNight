@@ -20,33 +20,26 @@ angular.forEach(data.results.bindings, function(val) {
 movie1 = $scope.myDynamicLabels[0]
 movie1 = movie1.split('/')
 movie1 = movie1[movie1.length-1]
-console.log(movie1)
 omdb(movie1)
 
 movie2 = $scope.myDynamicLabels[1]
 movie2 = movie2.split('/')
 movie2 = movie2[movie2.length-1]
-console.log(movie2)
 omdb(movie2)
 
 movie3 = $scope.myDynamicLabels[2]
 movie3 = movie3.split('/')
 movie3 = movie3[movie3.length-1]
-console.log(movie3)
-
 omdb(movie3)
 
 movie4 = $scope.myDynamicLabels[3]
 movie4 = movie4.split('/')
 movie4 = movie4[movie4.length-1]
-console.log(movie4)
-
 omdb(movie4)
 
 movie5 = $scope.myDynamicLabels[4]
 movie5 = movie5.split('/')
 movie5 = movie5[movie5.length-1]
-console.log(movie5)
 omdb(movie5)
   		})
 			.error(function(error ){
@@ -156,7 +149,6 @@ function ageChecker() {
 function addActorQuery(Actorlist){
   for (i in Actorlist){
     sessionStorage.queryPart4 += " OPTIONAL {?movie dbo:starring dbr:" + Actorlist[i] + " .}"
-    console.log(sessionStorage.queryPart4)
   }
 }
 
@@ -166,7 +158,6 @@ function mergeQuery() {
   }
   sessionStorage.queryPart5 = "} ORDER BY DESC(?rating) LIMIT 100"
   sessionStorage.query = sessionStorage.queryPart1 + sessionStorage.queryPart2 + sessionStorage.queryPart3 + sessionStorage.queryPart4 + sessionStorage.queryPart5
-  console.log(sessionStorage.query)
 }
 function sendQuery() {
   document.getElementById("inputField").value = ""
