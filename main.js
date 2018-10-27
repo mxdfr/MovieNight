@@ -57,9 +57,6 @@ function omdb(title) {
         var movieTitle = data.Title
         var movieGenre = "<br>Genres: " + data.Genre
         var movieActors = "<br>Actors: " + data.Actors
-        linkx = document.createElement('a');
-        linkx.setAttribute('href',"https://stackoverflow.com/questions/5519747/how-to-add-anchor-tags-dynamically-to-a-div-in-javascript")
-        linkx.innerHTML = "link text";
         var movieDirector = "<br>Director: " + data.Director
         var movieWriter = "<br>Writer: " + data.Writer
         var movieRuntime = "<br>Runtime: " + data.Runtime
