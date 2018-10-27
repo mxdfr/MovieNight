@@ -197,7 +197,9 @@ function sendQuery() {
 
 
 }
-
+function navActor() {
+  window.location.href = '#dbpedia'
+}
 function resetSession() {
   sessionStorage.query = ""
   sessionStorage.queryPart1 = ""  

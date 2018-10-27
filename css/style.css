@@ -512,6 +512,22 @@ html, body {
     opacity: 1;
   }
 }
+.actorButton {
+  background: #131820;
+  background: -moz-linear-gradient(top, #864444 0%, #532a30 100%);
+  background: -webkit-linear-gradient(top, #864444 0%, #532a30 100%);
+  background: linear-gradient(to bottom, #864444 0%, #532a30 100%);
+  border-radius: 50px;
+  padding: 15px 50px;
+  margin-top: 40px !important;
+  color: #fff;
+  margin: auto;
+  width: fit-content;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
 
 /* line 463, C:/Users/ramon/OneDrive/Documenten/Vu jaar 2/Knowledge and Data/Final project/MovieNight/scss/style.scss */
 .slidecontainer {
