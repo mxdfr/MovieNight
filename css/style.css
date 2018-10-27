@@ -538,50 +538,19 @@ html, body {
   }
 }
 
-/* line 482, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
-.actorButton {
-  border-radius: 10px;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  z-index: 99999;
-  border: 2px solid #1b1a1a;
-  background: -moz-linear-gradient(top, #131820 0%, #532a30 100%);
-  background: -webkit-linear-gradient(top, #131820 0%, #532a30 100%);
-  background: linear-gradient(to bottom, #131820 0%, #532a30 100%);
-  border-radius: 50px;
-  padding: 15px;
-  color: #fff;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-}
-
-/* line 496, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
-.actorButton:hover {
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-  background: -moz-linear-gradient(top, #864444 0%, #532a30 100%);
-  background: -webkit-linear-gradient(top, #864444 0%, #532a30 100%);
-  background: linear-gradient(to bottom, #864444 0%, #532a30 100%);
-}
-
-/* line 503, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 481, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 #actorDiv {
   color: #fff;
 }
 
-/* line 507, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 485, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 .slidecontainer {
   width: 100%;
   display: none;
   text-align: center;
 }
 
-/* line 511, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 489, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 .slidecontainer .slider {
   -webkit-appearance: none;
   width: 100%;
@@ -594,12 +563,12 @@ html, body {
   border-radius: 30px;
 }
 
-/* line 523, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 501, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 .slidecontainer .slider:hover {
   opacity: 1;
 }
 
-/* line 527, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 505, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 .slidecontainer .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -610,7 +579,7 @@ html, body {
   border-radius: 30px;
 }
 
-/* line 537, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 515, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 .slidecontainer .slider::-moz-range-thumb {
   width: 25px;
   height: 25px;
@@ -619,41 +588,41 @@ html, body {
   border-radius: 30px;
 }
 
-/* line 547, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 525, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 .content-wrapper {
   min-height: calc(100vh - 80px);
 }
 
-/* line 550, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 528, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 .footer {
   padding-bottom: 10px;
   color: rgba(255, 255, 255, 0.2);
   text-align: center;
 }
 
-/* line 556, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 534, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 #final_table {
   color: #fff;
 }
 
-/* line 559, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 537, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 .fa {
   font-size: 12px;
   opacity: 0.6;
 }
 
-/* line 563, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 541, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 #omdb {
   color: #fff;
 }
 
-/* line 564, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 542, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 #omdb .movieTitle {
   font-weight: 600;
   font-size: 22px;
 }
 
-/* line 570, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
+/* line 548, /Users/maxdefroe/stack/Studie/_P1/Knowledge and Data/Final Project/MovieNight/scss/style.scss */
 #omdb #websiteTag a {
   color: #ffffff;
   background-color: #ffffff17 !important;

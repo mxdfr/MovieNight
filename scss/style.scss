@@ -478,28 +478,6 @@ html, body {
         100%{opacity: 1;}
     }
 }
-
-.actorButton {
-    border-radius: 10px;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    z-index: 99999;
-    border: 2px solid #1b1a1a;
-    background: -moz-linear-gradient(top, #131820 0%, #532a30 100%); 
-    background: -webkit-linear-gradient(top, #131820 0%,#532a30 100%);
-    background: linear-gradient(to bottom, #131820 0%,#532a30 100%);          
-    border-radius: 50px;
-    padding: 15px;
-    color:#fff;
-    @include transition(1);
-    &:hover {
-        @include transition(1);
-        background: -moz-linear-gradient(top,#864444 0%, #532a30 100%); 
-        background: -webkit-linear-gradient(top, #864444 0%,#532a30 100%);
-        background: linear-gradient(to bottom, #864444 0%,#532a30 100%);
-    }
-}
 #actorDiv {
     color: #fff;
 }
