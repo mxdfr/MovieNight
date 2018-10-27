@@ -47,7 +47,7 @@
             </tbody></table>
             <!--Make sure the form has the autocomplete function switched off:-->
             <div id="selectedactors">
-              <table>
+              <table id="actortable">
 
               </table>
             </div>
@@ -131,7 +131,6 @@
           $('.skipButton').attr("onclick", "questionFour()");
         } 
         function questionFour(){
-          mergeQuery()
           $(".slidecontainer").css("display" , "none");
           $( ".answerWrapper" ).css("opacity" , "1");
           $( "#questionStatement" ).html("Name a few of your favorite actors:");
@@ -139,23 +138,49 @@
           $( "#selectedactors" ).slideDown();
           $( "#actorcompletefield" ).slideDown();
           $("#addActorBtn").attr("onclick","addActor()");
-          $(".submitButton").attr("onclick","show_results()");
+          $(".submitButton").attr("onclick","lastThings()");
+          // $(".submitButton").attr("onclick","make_actor_list()");
           $('.skipButton').attr("onclick", "show_results()");
-        } 
+        }
+        function lastThings(){
+          make_actor_list()
+          mergeQuery()
+          show_results()
+        }
+        var ActorList = {}
         function addActor() {
           var selectedActor = $("#actorInput").val();
-          $( "#selectedactors > table" ).append("<tr> <td>" + selectedActor + "</td></tr>");
+          if ($("#actorInput").val() == ""){
+          }
+          else{
+          $( "#selectedactors > table" ).append("<tr><td>" + selectedActor + "</td></tr>");
           $("#actorInput").val("");
-        }
+          }
+        
         $('#selectedactors').on('click', 'tr', function() {
             $(this).remove();
-        });   
+        });
+        $( "#selectedactors > table" ).append("</table>")
+        }
+        function make_actor_list(){
+        var Actorlist = []
+        var table = document.getElementById("actortable");
+        for (var i = 0, row; row = table.rows[i]; i++) {
+            for (var j = 0, col; col = row.cells[j]; j++) {
+                Actorlist.push(col.innerHTML)
+}
+}
+// sessionStorage.Actorlist = list(Actorlist)
+// console.log(sessionStorage.Actorlist)
+addActorQuery(Actorlist)
+        }
          function show_results(){
 					$( "#questionpage" ).fadeOut( "slow");
 					$( "#next-page" ).delay(500).fadeIn( "slow");
 					$( ".filmrol" ).delay(1800).fadeOut( "slow", function() {
 						window.location.href = "final.html";
-					});
+          });
+          
       }
     </script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
